@@ -1,4 +1,4 @@
 haskell-concepts-mindmap
 ========================
 
-learning haskell notes
+Learning haskell notes made as a mind map
