@@ -1,6 +1,6 @@
 <map version="0.9.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
-<node CREATED="1400817565092" ID="ID_1559675124" MODIFIED="1401241383828" STYLE="fork" TEXT="haskell">
+<node CREATED="1400817565092" ID="ID_1559675124" MODIFIED="1402010682545" STYLE="fork" TEXT="haskell">
 <edge STYLE="bezier"/>
 <font NAME="SansSerif" SIZE="14"/>
 <node CREATED="1400817573641" ID="ID_1210242801" MODIFIED="1401241383828" POSITION="right" TEXT="monad">
@@ -29,7 +29,7 @@
 </node>
 <node CREATED="1400818016533" ID="ID_1419129811" MODIFIED="1401241383827" POSITION="right" TEXT="operator">
 <font NAME="SansSerif" SIZE="14"/>
-<node CREATED="1400818520085" ID="ID_1135247897" MODIFIED="1401946005573" TEXT="(list)">
+<node CREATED="1400818520085" ID="ID_1135247897" MODIFIED="1402015692297" TEXT="(list)">
 <font NAME="SansSerif" SIZE="14"/>
 <icon BUILTIN="attach"/>
 <node CREATED="1400818397381" ID="ID_365529956" MODIFIED="1401241383827" TEXT="!! (index)">
@@ -63,6 +63,24 @@
 <node CREATED="1401945832841" ID="ID_1147390617" MODIFIED="1401945900572" TEXT="[1,2..]==[1,2,3,4,5..&lt;lazy expansion&gt;]"/>
 <node CREATED="1401945935945" ID="ID_1512656887" MODIFIED="1401946048265" TEXT="cycle (takes a list and cycles it into an infinite list: cycle [1,2,3] == [1,2,3,1,2,3,1,2,3..]"/>
 <node CREATED="1401946052324" ID="ID_917472357" MODIFIED="1401946078630" TEXT="repeat 1 == [1,1,1,1..]"/>
+</node>
+<node CREATED="1402015694270" ID="ID_434089077" MODIFIED="1402016297653" TEXT="(comprehantion)">
+<node CREATED="1402016310304" ID="ID_896548588" MODIFIED="1402016316485" TEXT="(without predicate)">
+<node CREATED="1402015728206" ID="ID_268873408" MODIFIED="1402015957146" TEXT="[x*2 | x &lt;- [1..3]]==[2,4,6]">
+<node CREATED="1402015960981" ID="ID_713314266" MODIFIED="1402015993321" TEXT="variable: x"/>
+<node CREATED="1402015963881" ID="ID_1548998199" MODIFIED="1402015980589" TEXT="output function: x*2"/>
+<node CREATED="1402015995479" ID="ID_148317545" MODIFIED="1402016002037" TEXT="input set: [1..3]"/>
+</node>
+</node>
+<node CREATED="1402016329363" ID="ID_1196179466" MODIFIED="1402016334353" TEXT="(with predicate)">
+<node CREATED="1402015814102" ID="ID_1961513688" MODIFIED="1402015854066" TEXT="[x*2 | x &lt;- [1..3], x*2 &gt;=5]==[6]">
+<node CREATED="1402016011771" ID="ID_1891857687" MODIFIED="1402016164446" TEXT="predicate (or condition. use predicate==filtering): x*2&gt;=5"/>
+</node>
+<node CREATED="1402016380428" ID="ID_1822509898" MODIFIED="1402016398724" TEXT="[ if x &lt; 5 then &quot;foo&quot; else &quot;bar&quot; | x &lt;- [1..10], odd x]==[&quot;foo&quot;,&quot;foo&quot;,&quot;bar&quot;,&quot;bar&quot;,&quot;bar&quot;]"/>
+</node>
+<node CREATED="1402016339581" ID="ID_1837300428" MODIFIED="1402016347269" TEXT="(with multiple predicates)">
+<node CREATED="1402016456508" ID="ID_1036643308" MODIFIED="1402016504833" TEXT="[ x | x &lt;- [1..3], x /= 1, x /= 3]==[2]"/>
+</node>
 </node>
 </node>
 <node CREATED="1400818539434" ID="ID_1661147481" MODIFIED="1401241896389" TEXT="(string)">
@@ -251,6 +269,9 @@
 <node CREATED="1401166049341" ID="ID_1075884405" MODIFIED="1401241383807" TEXT="a type tag begin with a capital letter">
 <font NAME="SansSerif" SIZE="14"/>
 </node>
+</node>
+<node CREATED="1402010683705" ID="ID_1380350271" MODIFIED="1402010747455" POSITION="left" TEXT="ghci">
+<node CREATED="1402010692758" ID="ID_1269850627" MODIFIED="1402010726634" TEXT="let operator is equivalent of saving a statement in a file and load it"/>
 </node>
 </node>
 </map>
