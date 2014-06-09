@@ -423,28 +423,8 @@
 </node>
 </node>
 <node CREATED="1402078484915" ID="ID_1445304547" MODIFIED="1402078490759" TEXT="(typeclassess)">
-<node CREATED="1402299809950" ID="ID_885870187" MODIFIED="1402299812054" TEXT="facts">
-<node CREATED="1402299812790" ID="ID_979407252" MODIFIED="1402299819513" TEXT="it&apos;s not OOP classes"/>
-<node CREATED="1402299833035" ID="ID_1926194949" MODIFIED="1402300018165" TEXT="a typeclass is a sort of interface (think Java interfaces only better) which defines some behaviour"/>
-<node CREATED="1402300373068" ID="ID_1632748407" MODIFIED="1402300390682" TEXT="All standard Haskell types except for IO (the type for dealing with input and output) and functions are a part of the Eq typeclass"/>
-</node>
-<node CREATED="1402300442978" ID="ID_9147669" MODIFIED="1402349989961" TEXT="basic typeclasses">
-<node CREATED="1402300450296" ID="ID_667468881" MODIFIED="1402300451925" TEXT="Eq">
-<node CREATED="1402300193951" ID="ID_1908628049" MODIFIED="1402300196112" TEXT="(==) :: (Eq a) =&gt; a -&gt; a -&gt; Bool ">
-<node CREATED="1402300294645" ID="ID_327515348" MODIFIED="1402300296781" TEXT="meaning">
-<node CREATED="1402300201123" ID="ID_359105808" MODIFIED="1402300257306" TEXT="&quot;(Eq a)&quot; is class constraint"/>
-<node CREATED="1402300280592" ID="ID_947701175" MODIFIED="1402300292433" TEXT="the equality function takes any two values that are of the same type and returns a Bool. The type of those two values must be a member of the Eq class (this was the class constraint)"/>
-</node>
-</node>
-</node>
-<node CREATED="1402300458441" ID="ID_1200477255" MODIFIED="1402300459970" TEXT="Ord"/>
-<node CREATED="1402300468657" ID="ID_135411168" MODIFIED="1402300470243" TEXT="Show"/>
-<node CREATED="1402300471018" ID="ID_1108516976" MODIFIED="1402300472155" TEXT="Read"/>
-<node CREATED="1402300479754" ID="ID_1870916703" MODIFIED="1402300481742" TEXT="Enum"/>
-<node CREATED="1402300482457" ID="ID_605095047" MODIFIED="1402300484737" TEXT="Bounded"/>
-<node CREATED="1402300490497" ID="ID_125682160" MODIFIED="1402300492316" TEXT="Num"/>
-<node CREATED="1402300492935" ID="ID_1685119859" MODIFIED="1402300495411" TEXT="Integral"/>
-<node CREATED="1402300505111" ID="ID_533762032" MODIFIED="1402300509271" TEXT="Floating"/>
+<node CREATED="1402078491708" ID="ID_1034082692" MODIFIED="1402078512485" TEXT="Think Java interfaces, only better">
+<node CREATED="1402078516471" ID="ID_1818949063" MODIFIED="1402078542950" TEXT="(==) :: (Eq a) =&gt; a -&gt; a -&gt; Bool"/>
 </node>
 </node>
 </node>
@@ -465,11 +445,6 @@
 </node>
 <node CREATED="1402010683705" ID="ID_1380350271" MODIFIED="1402010747455" POSITION="left" TEXT="ghci">
 <node CREATED="1402010692758" ID="ID_1269850627" MODIFIED="1402010726634" TEXT="let operator is equivalent of saving a statement in a file and load it"/>
-<node CREATED="1402300071423" ID="ID_1102689665" MODIFIED="1402300086791" TEXT=":t &lt;FUNCITON&gt; shows funciton definitaion">
-<node CREATED="1402300096402" ID="ID_1711459392" MODIFIED="1402300184941" TEXT=" ghci&gt; :t (==)">
-<node CREATED="1402300119016" ID="ID_538934094" MODIFIED="1402300120202" TEXT="(==) :: (Eq a) =&gt; a -&gt; a -&gt; Bool "/>
-</node>
-</node>
 </node>
 </node>
 </map>

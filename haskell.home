@@ -1,9 +1,9 @@
 <map version="0.9.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
-<node CREATED="1400817565092" ID="ID_1559675124" MODIFIED="1402010682545" STYLE="fork" TEXT="haskell">
+<node CREATED="1400817565092" ID="ID_1559675124" MODIFIED="1402299757455" STYLE="fork" TEXT="haskell">
 <edge STYLE="bezier"/>
 <font NAME="SansSerif" SIZE="14"/>
-<node CREATED="1400817573641" ID="ID_1210242801" MODIFIED="1402077223160" POSITION="right" TEXT="(monad)">
+<node CREATED="1400817573641" ID="ID_1210242801" MODIFIED="1401241383828" POSITION="right" TEXT="monad">
 <font NAME="SansSerif" SIZE="14"/>
 <node CREATED="1400817583841" ID="ID_446361165" MODIFIED="1401241383827" TEXT="IO">
 <font NAME="SansSerif" SIZE="14"/>
@@ -27,7 +27,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1400818016533" ID="ID_1419129811" MODIFIED="1402077214626" POSITION="right" TEXT="(operator)">
+<node CREATED="1400818016533" ID="ID_1419129811" MODIFIED="1401241383827" POSITION="right" TEXT="operator">
 <font NAME="SansSerif" SIZE="14"/>
 <node CREATED="1400818520085" ID="ID_1135247897" MODIFIED="1402029927039" TEXT="(list)">
 <font NAME="SansSerif" SIZE="14"/>
@@ -62,7 +62,7 @@
 </node>
 <node CREATED="1401945209862" ID="ID_1562437785" MODIFIED="1402019647640" TEXT="head, tail, last, init">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
-<node CREATED="1402017444801" ID="ID_1093367306" MODIFIED="1402019708637" TEXT="self-describing parts of the list.  init is &quot;everything but last element&quot;"/>
+<node CREATED="1402017444801" ID="ID_1093367306" MODIFIED="1402019708637" TEXT="self-describing parts of the list. init is &quot;everything but last element&quot;"/>
 </node>
 <node CREATED="1401945270832" ID="ID_102526009" MODIFIED="1402019647641" TEXT="reverse">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
@@ -168,10 +168,13 @@
 </node>
 </node>
 </node>
-<node CREATED="1400818539434" ID="ID_1661147481" MODIFIED="1402076257122" TEXT="String">
+<node CREATED="1400818539434" ID="ID_1661147481" MODIFIED="1401241896389" TEXT="(string)">
 <font NAME="SansSerif" SIZE="14"/>
 <icon BUILTIN="attach"/>
-<node CREATED="1402076208276" ID="ID_395006567" MODIFIED="1402076288686" TEXT="String is synonym for [Char]. See (list) for operations with [Char]"/>
+<node CREATED="1400818421603" ID="ID_1797960326" MODIFIED="1402021938417" TEXT="++">
+<font BOLD="true" NAME="SansSerif" SIZE="14"/>
+<node CREATED="1402021627452" ID="ID_975567228" MODIFIED="1402021629635" TEXT="concatenation"/>
+</node>
 </node>
 <node CREATED="1400818592909" ID="ID_537218344" MODIFIED="1401241896388" TEXT="(function)">
 <font NAME="SansSerif" SIZE="14"/>
@@ -204,8 +207,8 @@
 <font BOLD="true" NAME="SansSerif" SIZE="14"/>
 <node CREATED="1402021716189" ID="ID_992125016" MODIFIED="1402021717391" TEXT="equality"/>
 </node>
-<node COLOR="#010101" CREATED="1402021694714" ID="ID_1272365539" MODIFIED="1402076655080" TEXT="/=">
-<font BOLD="true" NAME="SansSerif" SIZE="13"/>
+<node CREATED="1402021694714" ID="ID_1272365539" MODIFIED="1402021905865" TEXT="/=">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1402021697708" ID="ID_1822497616" MODIFIED="1402021704039" TEXT="nonequality"/>
 </node>
 <node CREATED="1400818837712" ID="ID_922088978" MODIFIED="1402021905865" TEXT="&lt;,&gt;=,&lt;=,&gt;">
@@ -215,23 +218,21 @@
 <node CREATED="1400818867463" ID="ID_99106507" MODIFIED="1401241896387" TEXT="(boolean)">
 <font NAME="SansSerif" SIZE="14"/>
 <icon BUILTIN="attach"/>
-<node CREATED="1400818872907" ID="ID_1350795256" MODIFIED="1402076594962" TEXT="&amp;&amp;">
+<node CREATED="1400818872907" ID="ID_1350795256" MODIFIED="1402021905864" TEXT="&amp;&amp;">
 <font BOLD="true" NAME="SansSerif" SIZE="14"/>
 <node CREATED="1402021759022" ID="ID_1903377741" MODIFIED="1402021759848" TEXT="and"/>
 </node>
-<node CREATED="1402021744684" ID="ID_1109297121" MODIFIED="1402076690025" TEXT="||">
-<font BOLD="true" NAME="SansSerif" SIZE="14"/>
+<node CREATED="1402021744684" ID="ID_1109297121" MODIFIED="1402021905864" TEXT="||">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1402021747618" ID="ID_673390323" MODIFIED="1402021748613" TEXT="or"/>
 </node>
 </node>
 <node CREATED="1400818914264" ID="ID_1659375652" MODIFIED="1401241896387" TEXT="(monad)">
 <font NAME="SansSerif" SIZE="14"/>
 <icon BUILTIN="attach"/>
-<node CREATED="1400818019585" ID="ID_1654462603" MODIFIED="1402076549510" TEXT="&gt;&gt;=">
+<node CREATED="1400818019585" ID="ID_1654462603" MODIFIED="1402021905864" TEXT="&gt;&gt;=">
 <font BOLD="true" NAME="SansSerif" SIZE="14"/>
-<node CREATED="1402021772214" ID="ID_1986142807" MODIFIED="1402076663210" TEXT="&quot;bind&quot; piping value to the next funciton">
-<font NAME="SansSerif" SIZE="12"/>
-</node>
+<node CREATED="1402021772214" ID="ID_1986142807" MODIFIED="1402021774963" TEXT="&quot;bind&quot; piping value to the next funciton"/>
 </node>
 <node CREATED="1400818986644" ID="ID_1911735079" MODIFIED="1402021905864" TEXT="=&lt;&lt;">
 <font BOLD="true" NAME="SansSerif" SIZE="14"/>
@@ -257,105 +258,77 @@
 </node>
 </node>
 </node>
-<node CREATED="1401153849511" ID="ID_377269014" MODIFIED="1402076978333" TEXT="(pronounciation: to be sorted)">
+<node CREATED="1401153849511" ID="ID_377269014" MODIFIED="1401241911866" TEXT="(pronounciation: to be sorted)">
 <font NAME="SansSerif" SIZE="14"/>
-<node CREATED="1401153860344" ID="ID_1982540307" MODIFIED="1402077093688" TEXT="-&gt;">
-<font BOLD="true" NAME="SansSerif" SIZE="14"/>
-<node CREATED="1402076723085" ID="ID_1948768435" MODIFIED="1402076732745" TEXT="&quot;to / a function that takes ... and returns a ... / function that maps / is a function from to&quot; a-&gt;b: a to b"/>
+<node CREATED="1401153860344" ID="ID_1982540307" MODIFIED="1401241993284" TEXT="-&gt; (&quot;to / a function that takes ... and returns a ... / function that maps / is a function from to&quot; a-&gt;b: a to b)">
+<font NAME="SansSerif" SIZE="14"/>
 </node>
-<node CREATED="1401153879661" ID="ID_830007041" MODIFIED="1402077093688" TEXT="&lt;$&gt;">
-<font BOLD="true" NAME="SansSerif" SIZE="14"/>
-<node CREATED="1402076745697" ID="ID_453593123" MODIFIED="1402076751409" TEXT="&quot;fmap / dollar cyclops&quot;"/>
+<node CREATED="1401153879661" ID="ID_830007041" MODIFIED="1401241993292" TEXT="&lt;$&gt; (&quot;fmap / dollar cyclops&quot;)">
+<font NAME="SansSerif" SIZE="14"/>
 </node>
-<node CREATED="1401153895655" ID="ID_1087210190" MODIFIED="1402077093688" TEXT="&lt;$">
-<font BOLD="true" NAME="SansSerif" SIZE="14"/>
-<node CREATED="1402076770002" ID="ID_339976580" MODIFIED="1402076773286" TEXT="&quot;map-replace by&quot;. 0&lt;$ f: &quot;f map-replace by 0&quot;"/>
+<node CREATED="1401153895655" ID="ID_1087210190" MODIFIED="1401241993292" TEXT="&lt;$ (&quot;map-replace by&quot;. 0&lt;$ f: &quot;f map-replace by 0&quot;)">
+<font NAME="SansSerif" SIZE="14"/>
 </node>
-<node CREATED="1401153932340" ID="ID_1817382243" MODIFIED="1402077093688" TEXT="&lt;*&gt;">
-<font BOLD="true" NAME="SansSerif" SIZE="14"/>
-<node CREATED="1402076781923" ID="ID_1327698597" MODIFIED="1402076785162" TEXT="&quot;ap / apply / star cyclops&quot; Control.Monad.ap"/>
+<node CREATED="1401153932340" ID="ID_1817382243" MODIFIED="1401241993292" TEXT="&lt;*&gt; (&quot;ap / apply / star cyclops&quot; Control.Monad.ap)">
+<font NAME="SansSerif" SIZE="14"/>
 </node>
-<node CREATED="1401153979006" ID="ID_1532853091" MODIFIED="1402077093687" TEXT="$">
-<font BOLD="true" NAME="SansSerif" SIZE="14"/>
-<node CREATED="1402076791697" ID="ID_1179023825" MODIFIED="1402076794974" TEXT="&quot;none&quot;, just as &quot; &quot;, i.e. whitespace. 2: &quot;apply&quot;"/>
+<node CREATED="1401153979006" ID="ID_1532853091" MODIFIED="1401241993292" TEXT="$ (&quot;none&quot;, just as &quot; &quot;, i.e. whitespace. 2: &quot;apply&quot;)">
+<font NAME="SansSerif" SIZE="14"/>
 </node>
-<node CREATED="1401154013377" ID="ID_909431996" MODIFIED="1402077093687" TEXT=".">
-<font BOLD="true" NAME="SansSerif" SIZE="14"/>
-<node CREATED="1402076801439" ID="ID_450646911" MODIFIED="1402076803833" TEXT="&quot;of/compose/pipe to/after&quot;. f.g.h$x &quot;f of g of h applied to x&quot;"/>
+<node CREATED="1401154013377" ID="ID_909431996" MODIFIED="1401241993292" TEXT=". (&quot;of/compose/pipe to/after&quot;. f.g.h$x &quot;f of g of h applied to x&quot;)">
+<font NAME="SansSerif" SIZE="14"/>
 </node>
-<node CREATED="1401154048264" ID="ID_308057146" MODIFIED="1402077093687" TEXT="!">
-<font BOLD="true" NAME="SansSerif" SIZE="14"/>
-<node CREATED="1402076813695" ID="ID_43469792" MODIFIED="1402076857845" TEXT="&quot;index / strict&quot;"/>
+<node CREATED="1401154048264" ID="ID_308057146" MODIFIED="1401241993292" TEXT="! (&quot;index&quot;)">
+<font NAME="SansSerif" SIZE="14"/>
 </node>
-<node CREATED="1402076860961" ID="ID_1667691902" MODIFIED="1402077093687" TEXT="!!">
-<font BOLD="true" NAME="SansSerif" SIZE="12"/>
-<node CREATED="1402076863212" ID="ID_233735242" MODIFIED="1402076867486" TEXT="&quot;index&quot;"/>
+<node CREATED="1401154093124" ID="ID_1185957756" MODIFIED="1401241993292" TEXT="&lt;|&gt; (&quot;or / alternative. expr&quot; &lt;|&gt; term: &quot;expr or term&quot;)">
+<font NAME="SansSerif" SIZE="14"/>
 </node>
-<node CREATED="1401154093124" ID="ID_1185957756" MODIFIED="1402077093687" TEXT="&lt;|&gt;">
-<font BOLD="true" NAME="SansSerif" SIZE="14"/>
-<node CREATED="1402076874233" ID="ID_947718297" MODIFIED="1402076876880" TEXT="&quot;or / alternative. expr&quot; &lt;|&gt; term: &quot;expr or term&quot;"/>
+<node CREATED="1401154122877" ID="ID_811908605" MODIFIED="1401241993292" TEXT="++ (&quot;concat/plus/append&quot;)">
+<font NAME="SansSerif" SIZE="14"/>
 </node>
-<node CREATED="1401154122877" ID="ID_811908605" MODIFIED="1402077093687" TEXT="++">
-<font BOLD="true" NAME="SansSerif" SIZE="14"/>
-<node CREATED="1402076884050" ID="ID_41418274" MODIFIED="1402076887079" TEXT="&quot;concat/plus/append&quot;"/>
+<node CREATED="1401154143993" ID="ID_825990410" MODIFIED="1401241993292" TEXT=":: (&quot;has type / of type / as&quot;. f x :: Int: f x of type Int)">
+<font NAME="SansSerif" SIZE="14"/>
 </node>
-<node CREATED="1401154143993" ID="ID_825990410" MODIFIED="1402077093687" TEXT="::">
-<font BOLD="true" NAME="SansSerif" SIZE="14"/>
-<node CREATED="1402076896615" ID="ID_125294031" MODIFIED="1402076898814" TEXT="&quot;has type / of type / as&quot;. f x :: Int: f x of type Int"/>
+<node CREATED="1401154179921" ID="ID_656369160" MODIFIED="1401241993292" TEXT="@ (&quot;as&quot;. go ll@(l:ls): go ll as l cons ls)">
+<font NAME="SansSerif" SIZE="14"/>
 </node>
-<node CREATED="1401154179921" ID="ID_656369160" MODIFIED="1402077150738" TEXT="@">
-<font BOLD="true" NAME="SansSerif" SIZE="14"/>
-<node CREATED="1402076904715" ID="ID_22414082" MODIFIED="1402076907465" TEXT="&quot;as&quot;. go ll@(l:ls): go ll as l cons ls"/>
+<node CREATED="1401154204868" ID="ID_990219077" MODIFIED="1401241993292" TEXT="~ (&quot;lazy&quot;. go ~(a,b): go lazy pair a,b">
+<font NAME="SansSerif" SIZE="14"/>
 </node>
-<node CREATED="1401154204868" ID="ID_990219077" MODIFIED="1402077151294" TEXT="~">
-<font BOLD="true" NAME="SansSerif" SIZE="14"/>
-<node CREATED="1402076915834" ID="ID_105684545" MODIFIED="1402076921695" TEXT="&quot;lazy&quot;. go ~(a,b): go lazy pair a,b"/>
+<node CREATED="1401154493255" ID="ID_689803570" MODIFIED="1401241993291" TEXT="| (&quot;such that&quot;)">
+<font NAME="SansSerif" SIZE="14"/>
 </node>
-<node CREATED="1401154493255" ID="ID_689803570" MODIFIED="1402077175574" TEXT="|">
-<font BOLD="true" NAME="SansSerif" SIZE="14"/>
-<node CREATED="1402076928409" ID="ID_1888380411" MODIFIED="1402076931496" TEXT="&quot;such that&quot;"/>
+<node CREATED="1401154507841" ID="ID_725749102" MODIFIED="1401241993291" TEXT="&lt;- (&quot;is drawn from&quot;)">
+<font NAME="SansSerif" SIZE="14"/>
 </node>
-<node CREATED="1401154507841" ID="ID_725749102" MODIFIED="1402077131081" TEXT="&lt;-">
-<font BOLD="true" NAME="SansSerif" SIZE="14"/>
-<node CREATED="1402076940173" ID="ID_729100672" MODIFIED="1402076942881" TEXT="&quot;is drawn from&quot;"/>
+<node CREATED="1401154531981" ID="ID_108772126" MODIFIED="1401241993291" TEXT="= (&quot;is defined to be / is defined as&quot;)">
+<font NAME="SansSerif" SIZE="14"/>
 </node>
-<node CREATED="1401154531981" ID="ID_108772126" MODIFIED="1402077110843" TEXT="=">
-<font BOLD="true" NAME="SansSerif" SIZE="14"/>
-<node CREATED="1402076949063" ID="ID_261893915" MODIFIED="1402076952070" TEXT="&quot;is defined to be / is defined as&quot;"/>
+<node CREATED="1401154691345" ID="ID_1107619774" MODIFIED="1401241993291" TEXT="_ (&quot;whatever&quot;)">
+<font NAME="SansSerif" SIZE="14"/>
 </node>
-<node CREATED="1401154691345" ID="ID_1107619774" MODIFIED="1402077181046" TEXT="_">
-<font BOLD="true" NAME="SansSerif" SIZE="14"/>
-<node CREATED="1402076960537" ID="ID_1289522099" MODIFIED="1402076962910" TEXT="&quot;whatever&quot;"/>
+<node CREATED="1401154713305" ID="ID_1635792552" MODIFIED="1401241993291" TEXT=": (&quot;cons&quot;)">
+<font NAME="SansSerif" SIZE="14"/>
 </node>
-<node CREATED="1401154713305" ID="ID_1635792552" MODIFIED="1402077110842" TEXT=":">
-<font BOLD="true" NAME="SansSerif" SIZE="14"/>
-<node CREATED="1402076969185" ID="ID_1188866420" MODIFIED="1402076971506" TEXT="&quot;cons&quot;"/>
+<node CREATED="1401154723720" ID="ID_371197563" MODIFIED="1401241993291" TEXT="\ (&quot;lambda&quot;)">
+<font NAME="SansSerif" SIZE="14"/>
 </node>
-<node CREATED="1401154723720" ID="ID_371197563" MODIFIED="1402077110842" TEXT="\">
-<font BOLD="true" NAME="SansSerif" SIZE="14"/>
-<node CREATED="1402076981723" ID="ID_536572260" MODIFIED="1402077119378" TEXT="&quot;lambda&quot;">
-<font NAME="SansSerif" SIZE="12"/>
+<node CREATED="1401154758513" ID="ID_1363612222" MODIFIED="1401241993291" TEXT="=&gt; (&quot;implies / then&quot;)">
+<font NAME="SansSerif" SIZE="14"/>
 </node>
+<node CREATED="1401154868910" ID="ID_883775118" MODIFIED="1401241993291" TEXT="&lt;=&lt; (&quot;left fish&quot;)">
+<font NAME="SansSerif" SIZE="14"/>
 </node>
-<node CREATED="1401154758513" ID="ID_1363612222" MODIFIED="1402077110842" TEXT="=&gt;">
-<font BOLD="true" NAME="SansSerif" SIZE="14"/>
-<node CREATED="1402076990739" ID="ID_832425668" MODIFIED="1402076992881" TEXT="&quot;implies / then&quot;"/>
+<node CREATED="1401156466963" ID="ID_439575576" MODIFIED="1401241993290" TEXT="() (&quot;unit / empty tuple&quot;)">
+<font NAME="SansSerif" SIZE="14"/>
 </node>
-<node CREATED="1401154868910" ID="ID_883775118" MODIFIED="1402077110842" TEXT="&lt;=&lt;">
-<font BOLD="true" NAME="SansSerif" SIZE="14"/>
-<node CREATED="1402076999241" ID="ID_282230875" MODIFIED="1402077001475" TEXT="&quot;left fish&quot;"/>
-</node>
-<node CREATED="1401156466963" ID="ID_439575576" MODIFIED="1402077110841" TEXT="()">
-<font BOLD="true" NAME="SansSerif" SIZE="14"/>
-<node CREATED="1402077007597" ID="ID_1245653558" MODIFIED="1402077010177" TEXT="&quot;unit / empty tuple&quot;"/>
-</node>
-<node CREATED="1401156479926" ID="ID_990571544" MODIFIED="1402077110841" TEXT="[]">
-<font BOLD="true" NAME="SansSerif" SIZE="14"/>
-<node CREATED="1402077015668" ID="ID_30691837" MODIFIED="1402077017972" TEXT="&quot;empty list&quot;"/>
+<node CREATED="1401156479926" ID="ID_990571544" MODIFIED="1401241993290" TEXT="[] (&quot;empty list&quot;)">
+<font NAME="SansSerif" SIZE="14"/>
 </node>
 </node>
 </node>
-<node CREATED="1400818359749" ID="ID_1956809887" MODIFIED="1402078891902" POSITION="right" TEXT="(function)">
+<node CREATED="1400818359749" ID="ID_1956809887" MODIFIED="1401241383816" POSITION="left" TEXT="function">
 <font NAME="SansSerif" SIZE="14"/>
 <node CREATED="1400818362571" ID="ID_738875468" MODIFIED="1401241383816" TEXT="return">
 <font NAME="SansSerif" SIZE="14"/>
@@ -369,15 +342,8 @@
 <font NAME="SansSerif" SIZE="14"/>
 </node>
 </node>
-<node CREATED="1402078592403" ID="ID_402875694" MODIFIED="1402078677897" TEXT="all operators are functions with some syntax sugar">
-<node CREATED="1402078678457" ID="ID_1358207767" MODIFIED="1402078707671" TEXT="name of an operator comprised only of special characters"/>
-<node CREATED="1402078708657" ID="ID_1954351972" MODIFIED="1402078715800" TEXT="it&apos;s an infix function by default"/>
-<node CREATED="1402078716609" ID="ID_380576536" MODIFIED="1402078746954" TEXT="if you need to pass an operator to another function or call it as a prefix function surround it in parenthesis">
-<node CREATED="1402078778469" ID="ID_1968669045" MODIFIED="1402078824096" TEXT="(&gt;) :: (Ord a) =&gt; a -&gt; a -&gt; Bool"/>
 </node>
-</node>
-</node>
-<node CREATED="1401165459971" ID="ID_1980026447" MODIFIED="1402077232049" POSITION="right" TEXT="(data types)">
+<node CREATED="1401165459971" ID="ID_1980026447" MODIFIED="1401241383815" POSITION="right" TEXT="data types">
 <font NAME="SansSerif" SIZE="14"/>
 <node CREATED="1401165467900" ID="ID_1758341628" MODIFIED="1401241383815" TEXT="algebraic (a set of posiible values for exmple: data LispVal = Atom String | Bool Bool">
 <font NAME="SansSerif" SIZE="14"/>
@@ -391,44 +357,20 @@
 <font NAME="SansSerif" SIZE="14"/>
 </node>
 </node>
-<node CREATED="1402077434746" ID="ID_658622658" MODIFIED="1402077447346" TEXT="Integer">
-<node CREATED="1402077528736" ID="ID_822146582" MODIFIED="1402077563013" TEXT="mathematical Integer. Int with possiblity to present big numbers"/>
 </node>
-<node CREATED="1402077448203" ID="ID_549364373" MODIFIED="1402077450527" TEXT="Int">
-<node CREATED="1402077450527" ID="ID_606216647" MODIFIED="1402077527083" TEXT="C-language integer"/>
-</node>
-<node CREATED="1402077570523" ID="ID_1172720876" MODIFIED="1402077576483" TEXT="Float">
-<node CREATED="1402077577354" ID="ID_1478881928" MODIFIED="1402077588472" TEXT="real floating point with single precision"/>
-</node>
-<node CREATED="1402077596747" ID="ID_815263096" MODIFIED="1402077599990" TEXT="Double">
-<node CREATED="1402077601266" ID="ID_1100689722" MODIFIED="1402077618204" TEXT="real floating point with double precision"/>
-</node>
-<node CREATED="1402077848137" ID="ID_909836659" MODIFIED="1402077855082" TEXT="Char">
-<node CREATED="1402077856746" ID="ID_816073139" MODIFIED="1402077864983" TEXT="a character"/>
-</node>
-<node CREATED="1402077869248" ID="ID_1136380421" MODIFIED="1402077871645" TEXT="String">
-<node CREATED="1402077872197" ID="ID_1029914472" MODIFIED="1402077883783" TEXT="list of characters, i.e. [Char]"/>
-</node>
-<node CREATED="1402077889672" ID="ID_42048593" MODIFIED="1402077925032" TEXT="Bool">
-<node CREATED="1402077892753" ID="ID_479804870" MODIFIED="1402077909108" TEXT="Boolean, i.e. True | False"/>
-</node>
-<node CREATED="1402077927929" ID="ID_1486208340" MODIFIED="1402077933747" TEXT="(tuples)">
-<node CREATED="1402077936919" ID="ID_1875287471" MODIFIED="1402077988286" TEXT="every combination of tuple length and the types of tuple components is a different type"/>
-</node>
-<node CREATED="1402078060318" ID="ID_1480004342" MODIFIED="1402078483665" TEXT="(type variables)">
-<node CREATED="1402078067451" ID="ID_45130775" MODIFIED="1402078193382" TEXT="&quot;a&quot; is a type variable, i.e. &quot;a&quot; can be any type (think generics). It could be b, c, d...">
-<node CREATED="1402078131465" ID="ID_1396809496" MODIFIED="1402078160353" TEXT="fst :: (a, b) -&gt; a">
-<node CREATED="1402078194875" ID="ID_139426325" MODIFIED="1402078287698" TEXT="here &quot;a&quot; is a type, &quot;b&quot; could be another type (but not have to). But fst for sure returns the same type as first component of the argument tuple"/>
+<node CREATED="1401165710665" ID="ID_184189312" MODIFIED="1401241383807" POSITION="left" TEXT="notes">
+<font NAME="SansSerif" SIZE="14"/>
+<node CREATED="1401165714879" ID="ID_420922667" MODIFIED="1401241383807" TEXT="constructors and types have different namespaces">
+<font NAME="SansSerif" SIZE="14"/>
 </node>
 </node>
-</node>
-<node CREATED="1402078484915" ID="ID_1445304547" MODIFIED="1402078490759" TEXT="(typeclassess)">
+<node CREATED="1402299758425" ID="ID_814255912" MODIFIED="1402299961285" POSITION="right" TEXT="typeclasses">
 <node CREATED="1402299809950" ID="ID_885870187" MODIFIED="1402299812054" TEXT="facts">
 <node CREATED="1402299812790" ID="ID_979407252" MODIFIED="1402299819513" TEXT="it&apos;s not OOP classes"/>
 <node CREATED="1402299833035" ID="ID_1926194949" MODIFIED="1402300018165" TEXT="a typeclass is a sort of interface (think Java interfaces only better) which defines some behaviour"/>
 <node CREATED="1402300373068" ID="ID_1632748407" MODIFIED="1402300390682" TEXT="All standard Haskell types except for IO (the type for dealing with input and output) and functions are a part of the Eq typeclass"/>
 </node>
-<node CREATED="1402300442978" ID="ID_9147669" MODIFIED="1402349989961" TEXT="basic typeclasses">
+<node CREATED="1402300442978" ID="ID_9147669" MODIFIED="1402300449662" TEXT="basic typeclasses">
 <node CREATED="1402300450296" ID="ID_667468881" MODIFIED="1402300451925" TEXT="Eq">
 <node CREATED="1402300193951" ID="ID_1908628049" MODIFIED="1402300196112" TEXT="(==) :: (Eq a) =&gt; a -&gt; a -&gt; Bool ">
 <node CREATED="1402300294645" ID="ID_327515348" MODIFIED="1402300296781" TEXT="meaning">
@@ -447,14 +389,7 @@
 <node CREATED="1402300505111" ID="ID_533762032" MODIFIED="1402300509271" TEXT="Floating"/>
 </node>
 </node>
-</node>
-<node CREATED="1401165710665" ID="ID_184189312" MODIFIED="1401241383807" POSITION="left" TEXT="notes">
-<font NAME="SansSerif" SIZE="14"/>
-<node CREATED="1401165714879" ID="ID_420922667" MODIFIED="1401241383807" TEXT="constructors and types have different namespaces">
-<font NAME="SansSerif" SIZE="14"/>
-</node>
-</node>
-<node CREATED="1401165997076" ID="ID_356682919" MODIFIED="1402077237716" POSITION="right" TEXT="(naming conventions)">
+<node CREATED="1401165997076" ID="ID_356682919" MODIFIED="1401241383807" POSITION="right" TEXT="naming conventions">
 <font NAME="SansSerif" SIZE="14"/>
 <node CREATED="1401166004549" ID="ID_1189080068" MODIFIED="1401241383807" TEXT="a constructor tag begin with a capital letter">
 <font NAME="SansSerif" SIZE="14"/>
@@ -463,7 +398,7 @@
 <font NAME="SansSerif" SIZE="14"/>
 </node>
 </node>
-<node CREATED="1402010683705" ID="ID_1380350271" MODIFIED="1402010747455" POSITION="left" TEXT="ghci">
+<node CREATED="1402010683705" ID="ID_1380350271" MODIFIED="1402300070387" POSITION="left" TEXT="ghci">
 <node CREATED="1402010692758" ID="ID_1269850627" MODIFIED="1402010726634" TEXT="let operator is equivalent of saving a statement in a file and load it"/>
 <node CREATED="1402300071423" ID="ID_1102689665" MODIFIED="1402300086791" TEXT=":t &lt;FUNCITON&gt; shows funciton definitaion">
 <node CREATED="1402300096402" ID="ID_1711459392" MODIFIED="1402300184941" TEXT=" ghci&gt; :t (==)">
