@@ -360,6 +360,13 @@
 <node CREATED="1400818362571" ID="ID_738875468" MODIFIED="1401241383816" TEXT="return">
 <font NAME="SansSerif" SIZE="14"/>
 </node>
+<node CREATED="1402078592403" ID="ID_402875694" MODIFIED="1402078677897" TEXT="all operators are functions with some syntax sugar">
+<node CREATED="1402078678457" ID="ID_1358207767" MODIFIED="1402078707671" TEXT="name of an operator comprised only of special characters"/>
+<node CREATED="1402078708657" ID="ID_1954351972" MODIFIED="1402078715800" TEXT="it&apos;s an infix function by default"/>
+<node CREATED="1402078716609" ID="ID_380576536" MODIFIED="1402078746954" TEXT="if you need to pass an operator to another function or call it as a prefix function surround it in parenthesis">
+<node CREATED="1402078778469" ID="ID_1968669045" MODIFIED="1402078824096" TEXT="(&gt;) :: (Ord a) =&gt; a -&gt; a -&gt; Bool"/>
+</node>
+</node>
 <node CREATED="1401240324436" ID="ID_427661493" MODIFIED="1401241383816" TEXT="(pattern matching)">
 <font NAME="SansSerif" SIZE="14"/>
 <node CREATED="1401240355398" ID="ID_1987956269" MODIFIED="1401241383816" TEXT="function_name &lt;data PATTERN&gt; = &lt;alternative function_name body&gt;">
@@ -369,12 +376,24 @@
 <font NAME="SansSerif" SIZE="14"/>
 </node>
 </node>
-<node CREATED="1402078592403" ID="ID_402875694" MODIFIED="1402078677897" TEXT="all operators are functions with some syntax sugar">
-<node CREATED="1402078678457" ID="ID_1358207767" MODIFIED="1402078707671" TEXT="name of an operator comprised only of special characters"/>
-<node CREATED="1402078708657" ID="ID_1954351972" MODIFIED="1402078715800" TEXT="it&apos;s an infix function by default"/>
-<node CREATED="1402078716609" ID="ID_380576536" MODIFIED="1402078746954" TEXT="if you need to pass an operator to another function or call it as a prefix function surround it in parenthesis">
-<node CREATED="1402078778469" ID="ID_1968669045" MODIFIED="1402078824096" TEXT="(&gt;) :: (Ord a) =&gt; a -&gt; a -&gt; Bool"/>
+<node CREATED="1402620940340" ID="ID_274383845" MODIFIED="1402620944953" TEXT="where">
+<node CREATED="1402621015824" ID="ID_837726283" MODIFIED="1402621017363" TEXT="TODO"/>
 </node>
+<node CREATED="1402620957733" ID="ID_792412716" MODIFIED="1402620959166" TEXT="case">
+<node CREATED="1402621018517" ID="ID_760437792" MODIFIED="1402621019683" TEXT="TODO"/>
+</node>
+<node CREATED="1402620950020" ID="ID_1060770537" MODIFIED="1402621034491" TEXT="(guard)">
+<node CREATED="1402621021940" ID="ID_1504191251" MODIFIED="1402621023060" TEXT="TODO"/>
+</node>
+<node CREATED="1402621067658" ID="ID_1019013500" MODIFIED="1402621070538" TEXT="(recursion)">
+<node CREATED="1402621072503" ID="ID_1189128785" MODIFIED="1402621073545" TEXT="TODO"/>
+</node>
+<node CREATED="1402620834209" ID="ID_116776124" MODIFIED="1402621041011" TEXT="(higher order function)">
+<node CREATED="1402620845997" ID="ID_1083671772" MODIFIED="1402620899977" TEXT="function of multiple arguments is a chain of curried functions of single argument"/>
+<node CREATED="1402621091063" ID="ID_1881418119" MODIFIED="1402621101815" TEXT="curried functions"/>
+<node CREATED="1402621102561" ID="ID_1822304808" MODIFIED="1402621106833" TEXT="lambdas"/>
+<node CREATED="1402621139383" ID="ID_179018417" MODIFIED="1402621150691" TEXT="function application"/>
+<node CREATED="1402621117576" ID="ID_191644758" MODIFIED="1402621132227" TEXT="function composition"/>
 </node>
 </node>
 <node CREATED="1401165459971" ID="ID_1980026447" MODIFIED="1402358081529" POSITION="right" TEXT="(data types)">
