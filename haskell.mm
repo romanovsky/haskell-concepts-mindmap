@@ -403,8 +403,32 @@
 </node>
 <node CREATED="1402620834209" ID="ID_116776124" MODIFIED="1402621041011" TEXT="(higher order function)">
 <node CREATED="1402620845997" ID="ID_1083671772" MODIFIED="1402620899977" TEXT="function of multiple arguments is a chain of curried functions of single argument"/>
-<node CREATED="1402621091063" ID="ID_1881418119" MODIFIED="1402718093130" TEXT="curried function"/>
-<node CREATED="1402621102561" ID="ID_1822304808" MODIFIED="1402718085639" TEXT="lambda"/>
+<node CREATED="1402621091063" ID="ID_1881418119" MODIFIED="1402718093130" TEXT="curried function">
+<node CREATED="1404444020267" ID="ID_859766660" MODIFIED="1404444091946" TEXT="addThree :: (Num a) =&gt; a -&gt; a -&gt; a -&gt; a; addThree x y z = x + y + z ">
+<node CREATED="1404444093560" ID="ID_980147414" MODIFIED="1404444100647" TEXT="equivalent to">
+<node CREATED="1404444101170" ID="ID_860079771" MODIFIED="1404444115070" TEXT="addThree :: (Num a) =&gt; a -&gt; a -&gt; a -&gt; a; addThree = \x -&gt; \y -&gt; \z -&gt; x + y + z "/>
+</node>
+</node>
+</node>
+<node CREATED="1402621102561" ID="ID_1822304808" MODIFIED="1404443524067" TEXT="lambda">
+<node CREATED="1404443210082" ID="ID_353316595" MODIFIED="1404443224778" TEXT="map (\(a,b) -&gt; a + b) [(1,2),(3,4)]">
+<node CREATED="1404443227073" ID="ID_1286124427" MODIFIED="1404443259567" TEXT="\ - starts lambda definition"/>
+<node CREATED="1404443260624" ID="ID_394054730" MODIFIED="1404443667005" TEXT="(a,b) - a parameter of lambda function">
+<node CREATED="1404443793221" ID="ID_1516492565" MODIFIED="1404443804531" TEXT="pattern matching is the same as in regular functions"/>
+</node>
+<node CREATED="1404443296799" ID="ID_454904226" MODIFIED="1404443308040" TEXT="-&gt; starts lambda funciton body"/>
+<node CREATED="1404443312288" ID="ID_594852907" MODIFIED="1404443323667" TEXT="a+b - function body"/>
+</node>
+<node CREATED="1404443525966" ID="ID_928447696" MODIFIED="1404443548637" TEXT="map (+3) [1..3]">
+<node CREATED="1404443549497" ID="ID_1249187736" MODIFIED="1404443563641" TEXT="equivalent to">
+<node CREATED="1404443564249" ID="ID_339424923" MODIFIED="1404443577626" TEXT="map (\x -&gt; x+3) [1..3]"/>
+</node>
+</node>
+<node CREATED="1404443673455" ID="ID_1513858676" MODIFIED="1404443706177" TEXT="\ a b -&gt; a + b">
+<node CREATED="1404443707062" ID="ID_1153409689" MODIFIED="1404443744825" TEXT="lambda with multiple parameters, space separated"/>
+</node>
+<node CREATED="1404443939194" ID="ID_256199717" MODIFIED="1404444197601" TEXT="    flip&apos; :: (a -&gt; b -&gt; c) -&gt; b -&gt; a -&gt; c; flip&apos; f = \x y -&gt; f y x  "/>
+</node>
 <node CREATED="1402621139383" ID="ID_179018417" MODIFIED="1402621150691" TEXT="function application"/>
 <node CREATED="1402621117576" ID="ID_191644758" MODIFIED="1402621132227" TEXT="function composition"/>
 <node CREATED="1402974003840" ID="ID_597082623" MODIFIED="1402974015904" TEXT="function as an argument">
