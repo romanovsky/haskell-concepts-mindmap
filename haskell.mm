@@ -1,6 +1,6 @@
 <map version="0.9.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
-<node CREATED="1400817565092" ID="ID_1559675124" MODIFIED="1402010682545" STYLE="fork" TEXT="haskell">
+<node CREATED="1400817565092" ID="ID_1559675124" MODIFIED="1408589608474" STYLE="fork" TEXT="haskell">
 <edge STYLE="bezier"/>
 <font NAME="SansSerif" SIZE="14"/>
 <node CREATED="1400817573641" ID="ID_1210242801" MODIFIED="1402077223160" POSITION="right" TEXT="(monad)">
@@ -451,16 +451,56 @@
 </node>
 <node CREATED="1401165459971" ID="ID_1980026447" MODIFIED="1402358081529" POSITION="right" TEXT="(data types)">
 <font NAME="SansSerif" SIZE="14"/>
-<node CREATED="1401165467900" ID="ID_1758341628" MODIFIED="1401241383815" TEXT="algebraic (a set of posiible values for exmple: data LispVal = Atom String | Bool Bool">
+<node CREATED="1408587892507" ID="ID_1620831817" MODIFIED="1408587909299" TEXT="algebraic data types">
+<node CREATED="1408587954919" ID="ID_535586159" MODIFIED="1408588030657" TEXT="data Bool = True | False">
+<node CREATED="1408588954731" ID="ID_1577579234" MODIFIED="1408589198572" TEXT="&quot;Bool&quot; here is a new data type name"/>
+<node CREATED="1408589128133" ID="ID_498098894" MODIFIED="1408589172154" TEXT="&quot;False&quot;, &quot;True&quot; are possible values this type can have, &quot;value constructors&quot;"/>
+<node CREATED="1408589175071" ID="ID_633229786" MODIFIED="1408589186211" TEXT="&quot;|&quot; is read as &quot;or&quot;"/>
+<node CREATED="1408589075111" ID="ID_1768015711" MODIFIED="1408589220792" TEXT="Type name and value constructors have to be capital cased"/>
+</node>
+<node CREATED="1401165467900" ID="ID_1758341628" MODIFIED="1408588015252" TEXT="data LispVal = Atom String | Bool Bool">
 <font NAME="SansSerif" SIZE="14"/>
-<node CREATED="1401165540614" ID="ID_1649093789" MODIFIED="1401241383812" TEXT="constructor (each alternative separated by | above. Contains tag for the consturctor and type of data)">
+<node CREATED="1401165540614" ID="ID_1649093789" MODIFIED="1408589308840" TEXT="value constructor (&quot;Atom String&quot;, &quot;Bool Bool&quot;) contains tag for the consturctor (&quot;Atom&quot;, &quot;Bool&quot;) and type of data (&quot;String&quot;, &quot;Bool&quot;)">
 <font NAME="SansSerif" SIZE="14"/>
 </node>
-<node CREATED="1401166487736" ID="ID_354520646" MODIFIED="1401241383808" TEXT="every constructor in an algebraic data type also acts like a function that turns its arguments into a value of its type (casting?serega)">
+<node CREATED="1401166487736" ID="ID_354520646" MODIFIED="1408589596858" TEXT="every value constructor in an algebraic data type also acts like a function that turns its parameters into a value of its type. I.e. &quot;Atom&quot; is a function of one &quot;String&quot; parameter.">
 <font NAME="SansSerif" SIZE="14"/>
 </node>
 <node CREATED="1401166567781" ID="ID_253557681" MODIFIED="1401241383807" TEXT="a constructor serves as the left-hand side of a pattern-matching expression">
 <font NAME="SansSerif" SIZE="14"/>
+</node>
+</node>
+<node CREATED="1408589407139" ID="ID_962887176" MODIFIED="1408589410259" TEXT="data Shape = Circle Float Float Float | Rectangle Float Float Float Float">
+<node CREATED="1408589422593" ID="ID_774612580" MODIFIED="1408589508466" TEXT="Circle is a value constructor which has 3 Float parameters (x,y,r of the circle)"/>
+<node CREATED="1408589693151" ID="ID_906309694" MODIFIED="1408589715147" TEXT=":t Circle">
+<node CREATED="1408589716235" ID="ID_819109860" MODIFIED="1408589717468" TEXT="Circle :: Float -&gt; Float -&gt; Float -&gt; Shape"/>
+</node>
+</node>
+<node CREATED="1408590304211" ID="ID_234632208" MODIFIED="1408590313682" TEXT="data Shape = Circle Float Float Float | Rectangle Float Float Float Float deriving (Show)">
+<node CREATED="1408590319481" ID="ID_1354154928" MODIFIED="1408590465053" TEXT="&quot;deriving (Show)&quot; added to make Shape part of Show typeclass"/>
+<node CREATED="1408590483745" ID="ID_1175473724" MODIFIED="1408590525323" TEXT="now we can do &quot;ghci&gt; Circle 1 2 3&quot;"/>
+<node CREATED="1408590546943" ID="ID_946591856" MODIFIED="1408590594851" TEXT="value costructor is a function so we can get a list of concentric circles with map">
+<node CREATED="1408590595859" ID="ID_600543884" MODIFIED="1408590610230" TEXT="map (Circle 10 20) [4, 5, 6]"/>
+</node>
+<node CREATED="1408589785910" ID="ID_440059795" MODIFIED="1408589827889" TEXT="function that takes our custom data type Shape">
+<node CREATED="1408589828618" ID="ID_297278070" MODIFIED="1408589841942" TEXT="surface :: Shape -&gt; Float">
+<node CREATED="1408589848135" ID="ID_1248148848" MODIFIED="1408589961734" TEXT="we cannot use &quot;Circle -&gt; Float&quot; here, because &quot;Circle&quot; isn&apos;t a type, &quot;Shape&quot; is (same as we cannot use a function declared as &quot;True -&gt; Int&quot;)"/>
+<node CREATED="1408589992433" ID="ID_1687499664" MODIFIED="1408590004161" TEXT="we can use pattern match against constructors">
+<node CREATED="1408590006713" ID="ID_259433484" MODIFIED="1408590025366" TEXT="surface (Circle _ _ r) = pi * r ^2">
+<node CREATED="1408590094389" ID="ID_1917447984" MODIFIED="1408590235028" TEXT="we don&apos;t care about x,y when calculate surface of a circle"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1408590637341" ID="ID_1449625339" MODIFIED="1408590783505" TEXT="data Point = Point Float Float deriving (Show);   data Shape = Circle Point Float | Rectangle Point Point deriving (Show) ">
+<node CREATED="1408590668130" ID="ID_323918115" MODIFIED="1408590696481" TEXT="Define Point and use it as a center of our Circle"/>
+<node CREATED="1408590786553" ID="ID_58845683" MODIFIED="1408590852753" TEXT="data type name &quot;Point&quot; and its value costructor named the same. No special meaning. Used when there&apos;s the only value constructor"/>
+<node CREATED="1408590908519" ID="ID_1242131454" MODIFIED="1408590959149" TEXT="new version of surface: &quot;surface (Circle _ r) = pi * r ^2"/>
+</node>
+<node CREATED="1408591180643" ID="ID_624256253" MODIFIED="1408591203753" TEXT="to export value constructors from a module use &quot;..&quot;">
+<node CREATED="1408591204282" ID="ID_656876539" MODIFIED="1408591228896" TEXT="module Shapes ( Point (..), Shape(..), surface) where"/>
+<node CREATED="1408591342181" ID="ID_1035615314" MODIFIED="1408591380129" TEXT="not exporting value constructors of data types makes them more abstract in such a way that we hide their implementation"/>
 </node>
 </node>
 <node CREATED="1402077434746" ID="ID_658622658" MODIFIED="1402077447346" TEXT="Integer">
@@ -662,6 +702,28 @@
 <node CREATED="1402357948233" ID="ID_211715957" MODIFIED="1402357960116" TEXT=":k shows kind of a type">
 <node CREATED="1402357961423" ID="ID_1253756933" MODIFIED="1402357977216" TEXT="ghci&gt; :k Int">
 <node CREATED="1402357979558" ID="ID_394660838" MODIFIED="1402357983467" TEXT="Int :: *"/>
+</node>
+</node>
+<node CREATED="1407285490297" ID="ID_730943670" MODIFIED="1407285539248" TEXT=":m loads modules into the global namespace">
+<node CREATED="1407285540198" ID="ID_1775624382" MODIFIED="1407285549364" TEXT=":m + Data.List Data.Map"/>
+</node>
+</node>
+<node CREATED="1407285557532" ID="ID_118860972" MODIFIED="1407285561889" POSITION="right" TEXT="(module)">
+<node CREATED="1407285565726" ID="ID_1424357865" MODIFIED="1407285576690" TEXT="import">
+<node CREATED="1407285577342" ID="ID_377650547" MODIFIED="1407285585235" TEXT="import Data.List">
+<node CREATED="1407285587896" ID="ID_599643073" MODIFIED="1407285599543" TEXT="load Data.List into the global namespace"/>
+</node>
+<node CREATED="1407285602362" ID="ID_327563788" MODIFIED="1407285612366" TEXT="import Data.List (nub, sort)">
+<node CREATED="1407285613114" ID="ID_1940663233" MODIFIED="1407285753366" TEXT="load only nub and sort into the global namespace"/>
+</node>
+<node CREATED="1407285662349" ID="ID_1090435340" MODIFIED="1407285709444" TEXT="import Data.List hiding (nub)">
+<node CREATED="1407285673186" ID="ID_1712510461" MODIFIED="1407285702948" TEXT="load Data.List into the global namespace except the nub fuction"/>
+</node>
+<node CREATED="1407285713396" ID="ID_1984667798" MODIFIED="1407285724329" TEXT="import qualified Data.Map">
+<node CREATED="1407285759181" ID="ID_97744698" MODIFIED="1407285841934" TEXT="load Data.Map into the global namespace skipping those symbols which not conflict with existing ones"/>
+</node>
+<node CREATED="1407285858586" ID="ID_1702616247" MODIFIED="1407285868696" TEXT="import qualified Data.Map as M">
+<node CREATED="1407285869597" ID="ID_612645428" MODIFIED="1407285886490" TEXT="same as above plus you can refer to Data.Map by M"/>
 </node>
 </node>
 </node>
