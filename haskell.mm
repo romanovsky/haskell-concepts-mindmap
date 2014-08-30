@@ -451,7 +451,32 @@
 </node>
 <node CREATED="1401165459971" ID="ID_1980026447" MODIFIED="1402358081529" POSITION="right" TEXT="(data types)">
 <font NAME="SansSerif" SIZE="14"/>
-<node CREATED="1408587892507" ID="ID_1620831817" MODIFIED="1408587909299" TEXT="algebraic data types">
+<node CREATED="1408587892507" ID="ID_1620831817" MODIFIED="1409372027286" TEXT="(algebraic data types)">
+<node CREATED="1409372035837" ID="ID_472715748" MODIFIED="1409372093171" TEXT="algebraic data type is a type formed by combining other types">
+<node CREATED="1409372098227" ID="ID_224514047" MODIFIED="1409373078189" TEXT="product type - pair (or more) of types">
+<node CREATED="1409372232745" ID="ID_461385935" MODIFIED="1409372241608" TEXT="tuple">
+<node CREATED="1409373084542" ID="ID_1884723709" MODIFIED="1409373133186" TEXT="(1, True)">
+<node CREATED="1409373134094" ID="ID_169718928" MODIFIED="1409373139745" TEXT="Int * Bool"/>
+</node>
+</node>
+<node CREATED="1409372248710" ID="ID_1080037432" MODIFIED="1409372250568" TEXT="record"/>
+</node>
+<node CREATED="1409372103948" ID="ID_1414174154" MODIFIED="1409373351849" TEXT="sum type (AKA tagged unions AKA variant types. Type1+Type2)">
+<node CREATED="1409372709148" ID="ID_674163582" MODIFIED="1409372714277" TEXT="Bool">
+<node CREATED="1409372998184" ID="ID_613499969" MODIFIED="1409373010929" TEXT="data Bool = True | False"/>
+</node>
+<node CREATED="1409372731049" ID="ID_1352417654" MODIFIED="1409372766166" TEXT="value constructor"/>
+<node CREATED="1409372779327" ID="ID_1661755005" MODIFIED="1409372783235" TEXT="pattern matching"/>
+<node CREATED="1409372801254" ID="ID_649964575" MODIFIED="1409372803889" TEXT="Either"/>
+<node CREATED="1409372987299" ID="ID_1498793494" MODIFIED="1409372990167" TEXT="Maybe"/>
+</node>
+<node CREATED="1409372467160" ID="ID_1215841858" MODIFIED="1409372958443" TEXT="recursive type - partially defined in terms of itself">
+<node CREATED="1409372891105" ID="ID_100183006" MODIFIED="1409372924418" TEXT="list">
+<node CREATED="1409372902866" ID="ID_780570707" MODIFIED="1409372914365" TEXT="data List a = Empty | a: List a"/>
+</node>
+<node CREATED="1409372924997" ID="ID_200052672" MODIFIED="1409372934381" TEXT="tree"/>
+</node>
+</node>
 <node CREATED="1408587954919" ID="ID_535586159" MODIFIED="1408588030657" TEXT="data Bool = True | False">
 <node CREATED="1408588954731" ID="ID_1577579234" MODIFIED="1408589198572" TEXT="&quot;Bool&quot; here is a new data type name"/>
 <node CREATED="1408589128133" ID="ID_498098894" MODIFIED="1408589172154" TEXT="&quot;False&quot;, &quot;True&quot; are possible values this type can have, &quot;value constructors&quot;"/>
@@ -501,6 +526,41 @@
 <node CREATED="1408591180643" ID="ID_624256253" MODIFIED="1408591203753" TEXT="to export value constructors from a module use &quot;..&quot;">
 <node CREATED="1408591204282" ID="ID_656876539" MODIFIED="1408591228896" TEXT="module Shapes ( Point (..), Shape(..), surface) where"/>
 <node CREATED="1408591342181" ID="ID_1035615314" MODIFIED="1408591380129" TEXT="not exporting value constructors of data types makes them more abstract in such a way that we hide their implementation"/>
+</node>
+<node CREATED="1408933261111" ID="ID_570613264" MODIFIED="1408933336293" TEXT="(records)">
+<node CREATED="1408933294610" ID="ID_535088340" MODIFIED="1408933328118" TEXT="data Person = Person { firstName :: String, lastName :: String, age :: Int } deriving (Show)">
+<node CREATED="1408933614691" ID="ID_337496331" MODIFIED="1408933672086" TEXT="haskell automatically made functions for looking up fields in the data type">
+<node CREATED="1408933673089" ID="ID_150148051" MODIFIED="1408933689110" TEXT=":t firstName">
+<node CREATED="1408933689542" ID="ID_1789767099" MODIFIED="1408933700054" TEXT="firstName :: Person -&gt; String"/>
+</node>
+</node>
+<node CREATED="1408933786247" ID="ID_1769278754" MODIFIED="1408933889139" TEXT="Person { age=73, firstName=&quot;Charles&quot;, lastName=&quot;Darwin&quot;}">
+<node CREATED="1408934143619" ID="ID_1755677657" MODIFIED="1408934222232" TEXT="it isn&apos;t necessary to keep field order if you use record syntax and list all fields"/>
+</node>
+</node>
+</node>
+<node CREATED="1408940559600" ID="ID_1504990828" MODIFIED="1408940566750" TEXT="(type parameters)">
+<node CREATED="1408940574658" ID="ID_1145102053" MODIFIED="1408940585256" TEXT="data Maybe a = Nothing | Just a">
+<node CREATED="1408940590538" ID="ID_429741313" MODIFIED="1408940615097" TEXT="&quot;a&quot; is the type parameter (think of C++ templates)"/>
+</node>
+<node CREATED="1409104200947" ID="ID_1448919395" MODIFIED="1409104459990" TEXT="typeclass constraints">
+<node CREATED="1409104261840" ID="ID_1129176217" MODIFIED="1409104284941" TEXT="type constructor can have a type constraint"/>
+<node CREATED="1409104290832" ID="ID_1304891104" MODIFIED="1409104413787" TEXT="try to not use constraints in data declarations because you&apos;re going to put constraints into functions anyway"/>
+</node>
+</node>
+<node CREATED="1409105686131" ID="ID_685459046" MODIFIED="1409105692471" TEXT="deriving">
+<node CREATED="1409105693320" ID="ID_722412356" MODIFIED="1409107516066" TEXT="data Person = Person { firstName::String, lastName::String, age::Int} deriving (Eq, Show, Read)">
+<node CREATED="1409105768523" ID="ID_734735473" MODIFIED="1409107313581" TEXT="deriving from Eq will ask Haskell to check if value constructors match, i.e. implements &apos;==&apos; by comparing every field"/>
+<node CREATED="1409107318652" ID="ID_333110325" MODIFIED="1409107370154" TEXT="deriving from Show/Read will add the type String serialization/deserialization"/>
+<node CREATED="1409107449451" ID="ID_997191631" MODIFIED="1409107565484" TEXT="Ord deriving for multiple value constructors is implemented with assumption that the first defined constructor is smaller">
+<node CREATED="1409107566382" ID="ID_1580447460" MODIFIED="1409107583784" TEXT="data Bool = False | True deriving (Ord)">
+<node CREATED="1409107584529" ID="ID_252694993" MODIFIED="1409107612735" TEXT="True &gt; False">
+<node CREATED="1409107604845" ID="ID_1259311468" MODIFIED="1409107606659" TEXT="True"/>
+</node>
+</node>
+<node CREATED="1409107651059" ID="ID_265297650" MODIFIED="1409107705271" TEXT="data Maybe a = Nothing | Just a"/>
+</node>
+</node>
 </node>
 </node>
 <node CREATED="1402077434746" ID="ID_658622658" MODIFIED="1402077447346" TEXT="Integer">
