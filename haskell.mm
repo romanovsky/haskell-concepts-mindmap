@@ -3,7 +3,7 @@
 <node CREATED="1400817565092" ID="ID_1559675124" MODIFIED="1408589608474" STYLE="fork" TEXT="haskell">
 <edge STYLE="bezier"/>
 <font NAME="SansSerif" SIZE="14"/>
-<node CREATED="1400817573641" ID="ID_1210242801" MODIFIED="1402077223160" POSITION="right" TEXT="(monad)">
+<node CREATED="1400817573641" ID="ID_1210242801" MODIFIED="1411183378635" POSITION="right" TEXT="monad">
 <font NAME="SansSerif" SIZE="14"/>
 <node CREATED="1400817583841" ID="ID_446361165" MODIFIED="1401241383827" TEXT="IO">
 <font NAME="SansSerif" SIZE="14"/>
@@ -27,11 +27,10 @@
 </node>
 </node>
 </node>
-<node CREATED="1400818016533" ID="ID_1419129811" MODIFIED="1402360841122" POSITION="right" TEXT="(operator)">
+<node CREATED="1400818016533" ID="ID_1419129811" MODIFIED="1411183414552" POSITION="right" TEXT="operator">
 <font NAME="SansSerif" SIZE="14"/>
-<node CREATED="1400818520085" ID="ID_1135247897" MODIFIED="1402029927039" TEXT="(list)">
+<node CREATED="1400818520085" ID="ID_1135247897" MODIFIED="1411183383019" TEXT="list">
 <font NAME="SansSerif" SIZE="14"/>
-<icon BUILTIN="attach"/>
 <node CREATED="1400818397381" ID="ID_365529956" MODIFIED="1402021920450" TEXT="!!">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1402017285999" ID="ID_1463584521" MODIFIED="1402019708638" TEXT="index"/>
@@ -98,19 +97,19 @@
 </node>
 </node>
 </node>
-<node CREATED="1401945607802" ID="ID_1167950360" MODIFIED="1401945933489" TEXT="(ranges)">
+<node CREATED="1401945607802" ID="ID_1167950360" MODIFIED="1411183388166" TEXT="ranges">
 <node CREATED="1401945622300" ID="ID_820325727" MODIFIED="1401945631984" TEXT="[1..3] == [1,2,3]"/>
 <node CREATED="1401945634165" ID="ID_1266199588" MODIFIED="1401945652532" TEXT="[&apos;a&apos;..&apos;c&apos;]==[&apos;a&apos;,&apos;b&apos;,&apos;c&apos;]"/>
 <node CREATED="1401945663135" ID="ID_1337297321" MODIFIED="1401945710887" TEXT="[2,4..16]==[2,4,8,10,12,14,16]"/>
 <node CREATED="1401945739397" ID="ID_1775313130" MODIFIED="1401945775355" TEXT="[4,3..1]==[4,3,2,1]"/>
 <node CREATED="1401945823559" ID="ID_633258137" MODIFIED="1401945830662" TEXT="(infinite lists)"/>
 </node>
-<node CREATED="1401946006672" ID="ID_307251906" MODIFIED="1401946013158" TEXT="(infinite lists)">
+<node CREATED="1401946006672" ID="ID_307251906" MODIFIED="1411183394713" TEXT="infinite lists">
 <node CREATED="1401945832841" ID="ID_1147390617" MODIFIED="1401945900572" TEXT="[1,2..]==[1,2,3,4,5..&lt;lazy expansion&gt;]"/>
 <node CREATED="1401945935945" ID="ID_1512656887" MODIFIED="1401946048265" TEXT="cycle (takes a list and cycles it into an infinite list: cycle [1,2,3] == [1,2,3,1,2,3,1,2,3..]"/>
 <node CREATED="1401946052324" ID="ID_917472357" MODIFIED="1401946078630" TEXT="repeat 1 == [1,1,1,1..]"/>
 </node>
-<node CREATED="1402015694270" ID="ID_434089077" MODIFIED="1402022200882" TEXT="(comprehension)">
+<node CREATED="1402015694270" ID="ID_434089077" MODIFIED="1411183399655" TEXT="comprehension">
 <node CREATED="1402016310304" ID="ID_896548588" MODIFIED="1402022080189" TEXT="(without predicate)">
 <node CREATED="1402015728206" ID="ID_268873408" MODIFIED="1402015957146" TEXT="[x*2 | x &lt;- [1..3]]==[2,4,6]">
 <node CREATED="1402015960981" ID="ID_713314266" MODIFIED="1402015993321" TEXT="variable: x"/>
@@ -151,43 +150,23 @@
 </node>
 </node>
 </node>
-<node CREATED="1402029670185" ID="ID_1601891876" MODIFIED="1402029747211" TEXT="(tuple)">
-<icon BUILTIN="attach"/>
-<node CREATED="1402029747211" ID="ID_808228153" MODIFIED="1402029751443" TEXT="(pair)">
-<node CREATED="1402029697695" ID="ID_126553142" MODIFIED="1402029813715" TEXT="fst">
-<font BOLD="true" NAME="SansSerif" SIZE="12"/>
-<node CREATED="1402029707653" ID="ID_893032367" MODIFIED="1402029762680" TEXT="takes first component">
-<node CREATED="1402029764137" ID="ID_1698875207" MODIFIED="1402029850273" TEXT="fst (1,&quot;bar&quot;)==1"/>
-</node>
-</node>
-<node CREATED="1402029779106" ID="ID_1107016632" MODIFIED="1402029818231" TEXT="snd">
-<font BOLD="true" NAME="SansSerif" SIZE="12"/>
-<node CREATED="1402029784291" ID="ID_1533455596" MODIFIED="1402029797646" TEXT="takes second component">
-<node CREATED="1402029798303" ID="ID_251406176" MODIFIED="1402029860003" TEXT="snd (1,&quot;bar&quot;)==&quot;bar&quot;"/>
-</node>
-</node>
-</node>
-</node>
-<node CREATED="1400818539434" ID="ID_1661147481" MODIFIED="1402076257122" TEXT="String">
+<node CREATED="1400818539434" ID="ID_1661147481" MODIFIED="1411183405011" TEXT="String">
 <font NAME="SansSerif" SIZE="14"/>
-<icon BUILTIN="attach"/>
 <node CREATED="1402076208276" ID="ID_395006567" MODIFIED="1402076288686" TEXT="String is synonym for [Char]. See (list) for operations with [Char]"/>
 </node>
-<node CREATED="1400818592909" ID="ID_537218344" MODIFIED="1401241896388" TEXT="(function)">
+<node CREATED="1400818592909" ID="ID_537218344" MODIFIED="1411183409924" TEXT="function">
 <font NAME="SansSerif" SIZE="14"/>
-<icon BUILTIN="attach"/>
 <node CREATED="1400818602010" ID="ID_61493274" MODIFIED="1402021905866" TEXT=".">
 <font BOLD="true" NAME="SansSerif" SIZE="14"/>
-<node CREATED="1402021636646" ID="ID_1718686910" MODIFIED="1402021644976" TEXT="compositioin"/>
+<node CREATED="1402021636646" ID="ID_1718686910" MODIFIED="1411183279364" TEXT="composition"/>
 </node>
 <node CREATED="1400818609151" ID="ID_665291379" MODIFIED="1402021905866" TEXT="$">
 <font BOLD="true" NAME="SansSerif" SIZE="14"/>
 <node CREATED="1402021657578" ID="ID_917253809" MODIFIED="1402021666849" TEXT="infix function application: f $ x is the same as f x, but right associative instead of left. $ has low precedence and lets you eliminate some parenthesis"/>
 </node>
 </node>
-<node CREATED="1400818639055" ID="ID_59757003" MODIFIED="1401241896388" TEXT="(number)">
+<node CREATED="1400818639055" ID="ID_59757003" MODIFIED="1411183418852" TEXT="number">
 <font NAME="SansSerif" SIZE="14"/>
-<icon BUILTIN="attach"/>
 <node CREATED="1400818645329" ID="ID_249700785" MODIFIED="1402021905866" TEXT="^, ^^, **">
 <font BOLD="true" NAME="SansSerif" SIZE="14"/>
 <node CREATED="1402021869616" ID="ID_440371388" MODIFIED="1402021870522" TEXT="exponent"/>
@@ -197,14 +176,13 @@
 <node CREATED="1402021849540" ID="ID_1355644455" MODIFIED="1402021858294" TEXT="ariphmetic operations"/>
 </node>
 </node>
-<node CREATED="1400818786596" ID="ID_470236278" MODIFIED="1401241896388" TEXT="(relation)">
+<node CREATED="1400818786596" ID="ID_470236278" MODIFIED="1411183424432" TEXT="relation">
 <font NAME="SansSerif" SIZE="14"/>
-<icon BUILTIN="attach"/>
 <node CREATED="1400818792939" ID="ID_577086754" MODIFIED="1402021905865" TEXT="==">
 <font BOLD="true" NAME="SansSerif" SIZE="14"/>
 <node CREATED="1402021716189" ID="ID_992125016" MODIFIED="1402021717391" TEXT="equality"/>
 </node>
-<node COLOR="#010101" CREATED="1402021694714" ID="ID_1272365539" MODIFIED="1402076655080" TEXT="/=">
+<node COLOR="#010101" CREATED="1402021694714" FOLDED="true" ID="ID_1272365539" MODIFIED="1411183062150" TEXT="/=">
 <font BOLD="true" NAME="SansSerif" SIZE="13"/>
 <node CREATED="1402021697708" ID="ID_1822497616" MODIFIED="1402021704039" TEXT="nonequality"/>
 </node>
@@ -212,9 +190,8 @@
 <font BOLD="true" NAME="SansSerif" SIZE="14"/>
 </node>
 </node>
-<node CREATED="1400818867463" ID="ID_99106507" MODIFIED="1401241896387" TEXT="(boolean)">
+<node CREATED="1400818867463" ID="ID_99106507" MODIFIED="1411183436131" TEXT="boolean">
 <font NAME="SansSerif" SIZE="14"/>
-<icon BUILTIN="attach"/>
 <node CREATED="1400818872907" ID="ID_1350795256" MODIFIED="1402076594962" TEXT="&amp;&amp;">
 <font BOLD="true" NAME="SansSerif" SIZE="14"/>
 <node CREATED="1402021759022" ID="ID_1903377741" MODIFIED="1402021759848" TEXT="and"/>
@@ -224,9 +201,8 @@
 <node CREATED="1402021747618" ID="ID_673390323" MODIFIED="1402021748613" TEXT="or"/>
 </node>
 </node>
-<node CREATED="1400818914264" ID="ID_1659375652" MODIFIED="1401241896387" TEXT="(monad)">
+<node CREATED="1400818914264" ID="ID_1659375652" MODIFIED="1411183442263" TEXT="monad">
 <font NAME="SansSerif" SIZE="14"/>
-<icon BUILTIN="attach"/>
 <node CREATED="1400818019585" ID="ID_1654462603" MODIFIED="1402076549510" TEXT="&gt;&gt;=">
 <font BOLD="true" NAME="SansSerif" SIZE="14"/>
 <node CREATED="1402021772214" ID="ID_1986142807" MODIFIED="1402076663210" TEXT="&quot;bind&quot; piping value to the next funciton">
@@ -257,7 +233,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1401153849511" ID="ID_377269014" MODIFIED="1402076978333" TEXT="(pronounciation: to be sorted)">
+<node CREATED="1401153849511" ID="ID_377269014" MODIFIED="1411183295269" TEXT="pronounciation: to be sorted">
 <font NAME="SansSerif" SIZE="14"/>
 <node CREATED="1401153860344" ID="ID_1982540307" MODIFIED="1402077093688" TEXT="-&gt;">
 <font BOLD="true" NAME="SansSerif" SIZE="14"/>
@@ -355,7 +331,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1400818359749" ID="ID_1956809887" MODIFIED="1402360839538" POSITION="right" TEXT="(function)">
+<node CREATED="1400818359749" ID="ID_1956809887" MODIFIED="1411183499325" POSITION="right" TEXT="function">
 <font NAME="SansSerif" SIZE="14"/>
 <node CREATED="1400818362571" ID="ID_738875468" MODIFIED="1401241383816" TEXT="return">
 <font NAME="SansSerif" SIZE="14"/>
@@ -367,7 +343,7 @@
 <node CREATED="1402078778469" ID="ID_1968669045" MODIFIED="1402078824096" TEXT="(&gt;) :: (Ord a) =&gt; a -&gt; a -&gt; Bool"/>
 </node>
 </node>
-<node CREATED="1401240324436" ID="ID_427661493" MODIFIED="1401241383816" TEXT="(pattern matching)">
+<node CREATED="1401240324436" ID="ID_427661493" MODIFIED="1411183482412" TEXT="pattern matching">
 <font NAME="SansSerif" SIZE="14"/>
 <node CREATED="1401240355398" ID="ID_1987956269" MODIFIED="1401241383816" TEXT="function_name &lt;data PATTERN&gt; = &lt;alternative function_name body&gt;">
 <font NAME="SansSerif" SIZE="14"/>
@@ -386,12 +362,12 @@
 <icon BUILTIN="help"/>
 </node>
 </node>
-<node CREATED="1402620950020" ID="ID_1060770537" MODIFIED="1402621034491" TEXT="(guard)">
+<node CREATED="1402620950020" ID="ID_1060770537" MODIFIED="1411183486660" TEXT="guard">
 <node CREATED="1402621021940" ID="ID_1504191251" MODIFIED="1402974259629" TEXT="TODO">
 <icon BUILTIN="help"/>
 </node>
 </node>
-<node CREATED="1402621067658" ID="ID_1019013500" MODIFIED="1402621070538" TEXT="(recursion)">
+<node CREATED="1402621067658" ID="ID_1019013500" MODIFIED="1411183490618" TEXT="recursion">
 <node CREATED="1402621072503" ID="ID_1189128785" MODIFIED="1402974259629" TEXT="TODO">
 <icon BUILTIN="help"/>
 </node>
@@ -401,7 +377,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1402620834209" ID="ID_116776124" MODIFIED="1402621041011" TEXT="(higher order function)">
+<node CREATED="1402620834209" ID="ID_116776124" MODIFIED="1411183495770" TEXT="higher order function">
 <node CREATED="1402620845997" ID="ID_1083671772" MODIFIED="1402620899977" TEXT="function of multiple arguments is a chain of curried functions of single argument"/>
 <node CREATED="1402621091063" ID="ID_1881418119" MODIFIED="1402718093130" TEXT="curried function">
 <node CREATED="1404444020267" ID="ID_859766660" MODIFIED="1404444091946" TEXT="addThree :: (Num a) =&gt; a -&gt; a -&gt; a -&gt; a; addThree x y z = x + y + z ">
@@ -449,9 +425,9 @@
 </node>
 </node>
 </node>
-<node CREATED="1401165459971" ID="ID_1980026447" MODIFIED="1402358081529" POSITION="right" TEXT="(data types)">
+<node CREATED="1401165459971" ID="ID_1980026447" MODIFIED="1411183573580" POSITION="right" TEXT="data types">
 <font NAME="SansSerif" SIZE="14"/>
-<node CREATED="1408587892507" ID="ID_1620831817" MODIFIED="1409372027286" TEXT="(algebraic data types)">
+<node CREATED="1408587892507" ID="ID_1620831817" MODIFIED="1411183505477" TEXT="algebraic data types">
 <node CREATED="1409372035837" ID="ID_472715748" MODIFIED="1409372093171" TEXT="algebraic data type is a type formed by combining other types">
 <node CREATED="1409372098227" ID="ID_224514047" MODIFIED="1409373078189" TEXT="product type - pair (or more) of types">
 <node CREATED="1409372232745" ID="ID_461385935" MODIFIED="1409372241608" TEXT="tuple">
@@ -478,10 +454,12 @@
 </node>
 </node>
 <node CREATED="1408587954919" ID="ID_535586159" MODIFIED="1408588030657" TEXT="data Bool = True | False">
-<node CREATED="1408588954731" ID="ID_1577579234" MODIFIED="1408589198572" TEXT="&quot;Bool&quot; here is a new data type name"/>
-<node CREATED="1408589128133" ID="ID_498098894" MODIFIED="1408589172154" TEXT="&quot;False&quot;, &quot;True&quot; are possible values this type can have, &quot;value constructors&quot;"/>
+<node CREATED="1408588954731" ID="ID_1577579234" MODIFIED="1411181454957" TEXT="&quot;Bool&quot; here is a new data type name, or a &quot;type constructor&quot;"/>
+<node CREATED="1408589128133" ID="ID_498098894" MODIFIED="1411181281701" TEXT="&quot;False&quot;, &quot;True&quot; are possible values this type can have, &quot;value constructors&quot; (or &quot;data constructors&quot;)"/>
 <node CREATED="1408589175071" ID="ID_633229786" MODIFIED="1408589186211" TEXT="&quot;|&quot; is read as &quot;or&quot;"/>
 <node CREATED="1408589075111" ID="ID_1768015711" MODIFIED="1408589220792" TEXT="Type name and value constructors have to be capital cased"/>
+<node CREATED="1411181463322" ID="ID_571198784" MODIFIED="1411181593504" TEXT="&quot;Bool&quot; is a &quot;nullary type constructor&quot; (or simply a &quot;type&quot;) because it has zero arguments"/>
+<node CREATED="1411181508610" ID="ID_396317800" MODIFIED="1411181583895" TEXT="&quot;False&quot;, &quot;True&quot; are &quot;nullary data constructors&quot; (or simply a &quot;constant&quot;) because they have zero arguments"/>
 </node>
 <node CREATED="1401165467900" ID="ID_1758341628" MODIFIED="1408588015252" TEXT="data LispVal = Atom String | Bool Bool">
 <font NAME="SansSerif" SIZE="14"/>
@@ -584,17 +562,59 @@
 <node CREATED="1402077889672" ID="ID_42048593" MODIFIED="1402077925032" TEXT="Bool">
 <node CREATED="1402077892753" ID="ID_479804870" MODIFIED="1402077909108" TEXT="Boolean, i.e. True | False"/>
 </node>
-<node CREATED="1402077927929" ID="ID_1486208340" MODIFIED="1402077933747" TEXT="(tuples)">
+<node CREATED="1402077927929" ID="ID_1486208340" MODIFIED="1411183512270" TEXT="tuples">
 <node CREATED="1402077936919" ID="ID_1875287471" MODIFIED="1402077988286" TEXT="every combination of tuple length and the types of tuple components is a different type"/>
+<node CREATED="1411182721893" ID="ID_1395554774" MODIFIED="1411182732096" TEXT="()">
+<node CREATED="1411182751202" ID="ID_287530145" MODIFIED="1411182776506" TEXT="empty tuple type with the only value ()">
+<node CREATED="1411182777701" ID="ID_1813072410" MODIFIED="1411182785176" TEXT="it&apos;s a &quot;unit&quot;"/>
 </node>
-<node CREATED="1402078060318" ID="ID_1480004342" MODIFIED="1402078483665" TEXT="(type variables)">
+</node>
+<node CREATED="1411182837999" ID="ID_1322259812" MODIFIED="1411182923290" TEXT="there&apos;s no &quot;singleton tuple&quot;, it&apos;s useless"/>
+<node CREATED="1402029747211" ID="ID_808228153" MODIFIED="1411183516622" TEXT="pair">
+<node CREATED="1402029697695" ID="ID_126553142" MODIFIED="1402029813715" TEXT="fst">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node CREATED="1402029707653" ID="ID_893032367" MODIFIED="1402029762680" TEXT="takes first component">
+<node CREATED="1402029764137" ID="ID_1698875207" MODIFIED="1402029850273" TEXT="fst (1,&quot;bar&quot;)==1"/>
+</node>
+</node>
+<node CREATED="1402029779106" ID="ID_1107016632" MODIFIED="1402029818231" TEXT="snd">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node CREATED="1402029784291" ID="ID_1533455596" MODIFIED="1402029797646" TEXT="takes second component">
+<node CREATED="1402029798303" ID="ID_251406176" MODIFIED="1402029860003" TEXT="snd (1,&quot;bar&quot;)==&quot;bar&quot;"/>
+</node>
+</node>
+<node CREATED="1411181914351" ID="ID_1275613852" MODIFIED="1411181943266" TEXT="curry">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node CREATED="1411181948482" ID="ID_1995032140" MODIFIED="1411181967301" TEXT="converts an uncurried function to a curried function">
+<node CREATED="1411181967925" ID="ID_118837733" MODIFIED="1411181986300" TEXT="((a,b) -&gt; c) -&gt; a -&gt; b -&gt; c"/>
+</node>
+</node>
+<node CREATED="1411181927021" ID="ID_87394404" MODIFIED="1411181943267" TEXT="uncurry">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node CREATED="1411181988987" ID="ID_389196365" MODIFIED="1411182002923" TEXT="(a -&gt; b -&gt; c) -&gt; (a, b) -&gt; c"/>
+</node>
+<node CREATED="1411181935895" ID="ID_1440039249" MODIFIED="1411181943267" TEXT="swap">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node CREATED="1411182008142" ID="ID_449026202" MODIFIED="1411182013319" TEXT="(a, b) -&gt; (b, a)"/>
+</node>
+</node>
+<node CREATED="1411182073454" ID="ID_582205147" MODIFIED="1411183561013" TEXT="triple, greater sizes tuples"/>
+<node CREATED="1411182436185" ID="ID_93698642" MODIFIED="1411182659191" TEXT="tuples are algebraic data types with syntax sugar. They  have the only type constructure with the same name as their types">
+<node CREATED="1411182660377" ID="ID_389687" MODIFIED="1411182670596" TEXT="(4, True)">
+<node CREATED="1411182671629" ID="ID_1292609762" MODIFIED="1411182696425" TEXT="type is">
+<node CREATED="1411182697923" ID="ID_655769143" MODIFIED="1411182708187" TEXT="(,) Int Bool"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1402078060318" ID="ID_1480004342" MODIFIED="1411183567877" TEXT="type variables">
 <node CREATED="1402078067451" ID="ID_45130775" MODIFIED="1402078193382" TEXT="&quot;a&quot; is a type variable, i.e. &quot;a&quot; can be any type (think generics). It could be b, c, d...">
 <node CREATED="1402078131465" ID="ID_1396809496" MODIFIED="1402078160353" TEXT="fst :: (a, b) -&gt; a">
 <node CREATED="1402078194875" ID="ID_139426325" MODIFIED="1402078287698" TEXT="here &quot;a&quot; is a type, &quot;b&quot; could be another type (but not have to). But fst for sure returns the same type as first component of the argument tuple"/>
 </node>
 </node>
 </node>
-<node CREATED="1402078484915" ID="ID_1445304547" MODIFIED="1402078490759" TEXT="(typeclassess)">
+<node CREATED="1402078484915" ID="ID_1445304547" MODIFIED="1411183583936" TEXT="typeclassess">
 <node CREATED="1402299809950" ID="ID_885870187" MODIFIED="1402299812054" TEXT="facts">
 <node CREATED="1402299812790" ID="ID_979407252" MODIFIED="1402299819513" TEXT="it&apos;s not OOP classes"/>
 <node CREATED="1402299833035" ID="ID_1926194949" MODIFIED="1402300018165" TEXT="a typeclass is a sort of interface (think Java interfaces only better) which defines some behaviour"/>
@@ -743,7 +763,7 @@
 <font NAME="SansSerif" SIZE="14"/>
 </node>
 </node>
-<node CREATED="1401165997076" ID="ID_356682919" MODIFIED="1402077237716" POSITION="right" TEXT="(naming conventions)">
+<node CREATED="1401165997076" ID="ID_356682919" MODIFIED="1411183591304" POSITION="right" TEXT="naming conventions">
 <font NAME="SansSerif" SIZE="14"/>
 <node CREATED="1401166004549" ID="ID_1189080068" MODIFIED="1401241383807" TEXT="a constructor tag begin with a capital letter">
 <font NAME="SansSerif" SIZE="14"/>
@@ -768,7 +788,7 @@
 <node CREATED="1407285540198" ID="ID_1775624382" MODIFIED="1407285549364" TEXT=":m + Data.List Data.Map"/>
 </node>
 </node>
-<node CREATED="1407285557532" ID="ID_118860972" MODIFIED="1407285561889" POSITION="right" TEXT="(module)">
+<node CREATED="1407285557532" ID="ID_118860972" MODIFIED="1411183595847" POSITION="right" TEXT="module">
 <node CREATED="1407285565726" ID="ID_1424357865" MODIFIED="1407285576690" TEXT="import">
 <node CREATED="1407285577342" ID="ID_377650547" MODIFIED="1407285585235" TEXT="import Data.List">
 <node CREATED="1407285587896" ID="ID_599643073" MODIFIED="1407285599543" TEXT="load Data.List into the global namespace"/>
