@@ -505,7 +505,7 @@
 <node CREATED="1408591204282" ID="ID_656876539" MODIFIED="1408591228896" TEXT="module Shapes ( Point (..), Shape(..), surface) where"/>
 <node CREATED="1408591342181" ID="ID_1035615314" MODIFIED="1408591380129" TEXT="not exporting value constructors of data types makes them more abstract in such a way that we hide their implementation"/>
 </node>
-<node CREATED="1408933261111" ID="ID_570613264" MODIFIED="1408933336293" TEXT="(records)">
+<node CREATED="1408933261111" ID="ID_570613264" MODIFIED="1411184787989" TEXT="records">
 <node CREATED="1408933294610" ID="ID_535088340" MODIFIED="1408933328118" TEXT="data Person = Person { firstName :: String, lastName :: String, age :: Int } deriving (Show)">
 <node CREATED="1408933614691" ID="ID_337496331" MODIFIED="1408933672086" TEXT="haskell automatically made functions for looking up fields in the data type">
 <node CREATED="1408933673089" ID="ID_150148051" MODIFIED="1408933689110" TEXT=":t firstName">
@@ -517,7 +517,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1408940559600" ID="ID_1504990828" MODIFIED="1408940566750" TEXT="(type parameters)">
+<node CREATED="1408940559600" ID="ID_1504990828" MODIFIED="1411184793050" TEXT="type parameters">
 <node CREATED="1408940574658" ID="ID_1145102053" MODIFIED="1408940585256" TEXT="data Maybe a = Nothing | Just a">
 <node CREATED="1408940590538" ID="ID_429741313" MODIFIED="1408940615097" TEXT="&quot;a&quot; is the type parameter (think of C++ templates)"/>
 </node>
@@ -540,6 +540,14 @@
 </node>
 </node>
 </node>
+<node CREATED="1411184820811" ID="ID_471648274" MODIFIED="1411184836335" TEXT="smart constructors">
+<icon BUILTIN="help"/>
+<node CREATED="1411184842390" ID="ID_393460620" MODIFIED="1411184844080" TEXT="TODO"/>
+</node>
+</node>
+<node CREATED="1411184930571" ID="ID_1272171161" MODIFIED="1411184945167" TEXT="abstract data types">
+<icon BUILTIN="help"/>
+<node CREATED="1411184947307" ID="ID_1833561829" MODIFIED="1411184949214" TEXT="TODO"/>
 </node>
 <node CREATED="1402077434746" ID="ID_658622658" MODIFIED="1402077447346" TEXT="Integer">
 <node CREATED="1402077528736" ID="ID_822146582" MODIFIED="1402077563013" TEXT="mathematical Integer. Int with possiblity to present big numbers"/>
