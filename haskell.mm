@@ -1,6 +1,6 @@
 <map version="0.9.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
-<node CREATED="1400817565092" ID="ID_1559675124" MODIFIED="1408589608474" STYLE="fork" TEXT="haskell">
+<node CREATED="1400817565092" ID="ID_1559675124" MODIFIED="1412133611963" STYLE="fork" TEXT="haskell">
 <edge STYLE="bezier"/>
 <font NAME="SansSerif" SIZE="14"/>
 <node CREATED="1400817573641" ID="ID_1210242801" MODIFIED="1411183378635" POSITION="right" TEXT="monad">
@@ -549,6 +549,14 @@
 <icon BUILTIN="help"/>
 <node CREATED="1411184947307" ID="ID_1833561829" MODIFIED="1411184949214" TEXT="TODO"/>
 </node>
+<node CREATED="1402078060318" ID="ID_1480004342" MODIFIED="1412133751008" TEXT="type variables">
+<node CREATED="1402078067451" ID="ID_45130775" MODIFIED="1402078193382" TEXT="&quot;a&quot; is a type variable, i.e. &quot;a&quot; can be any type (think generics). It could be b, c, d...">
+<node CREATED="1402078131465" ID="ID_1396809496" MODIFIED="1402078160353" TEXT="fst :: (a, b) -&gt; a">
+<node CREATED="1402078194875" ID="ID_139426325" MODIFIED="1402078287698" TEXT="here &quot;a&quot; is a type, &quot;b&quot; could be another type (but not have to). But fst for sure returns the same type as first component of the argument tuple"/>
+</node>
+</node>
+</node>
+<node CREATED="1412133752050" ID="ID_1123068728" MODIFIED="1412133855000" TEXT="concrete types">
 <node CREATED="1402077434746" ID="ID_658622658" MODIFIED="1402077447346" TEXT="Integer">
 <node CREATED="1402077528736" ID="ID_822146582" MODIFIED="1402077563013" TEXT="mathematical Integer. Int with possiblity to present big numbers"/>
 </node>
@@ -613,12 +621,6 @@
 <node CREATED="1411182697923" ID="ID_655769143" MODIFIED="1411182708187" TEXT="(,) Int Bool"/>
 </node>
 </node>
-</node>
-</node>
-<node CREATED="1402078060318" ID="ID_1480004342" MODIFIED="1411183567877" TEXT="type variables">
-<node CREATED="1402078067451" ID="ID_45130775" MODIFIED="1402078193382" TEXT="&quot;a&quot; is a type variable, i.e. &quot;a&quot; can be any type (think generics). It could be b, c, d...">
-<node CREATED="1402078131465" ID="ID_1396809496" MODIFIED="1402078160353" TEXT="fst :: (a, b) -&gt; a">
-<node CREATED="1402078194875" ID="ID_139426325" MODIFIED="1402078287698" TEXT="here &quot;a&quot; is a type, &quot;b&quot; could be another type (but not have to). But fst for sure returns the same type as first component of the argument tuple"/>
 </node>
 </node>
 </node>
@@ -761,6 +763,41 @@
 </node>
 <node CREATED="1402357476181" ID="ID_1426661374" MODIFIED="1402357477552" TEXT="Read"/>
 <node CREATED="1402357504390" ID="ID_66491890" MODIFIED="1402357509530" TEXT="Num"/>
+</node>
+<node CREATED="1412134394546" ID="ID_1198708528" MODIFIED="1412134409164" TEXT="Functor">
+<node CREATED="1412134415737" ID="ID_1170540679" MODIFIED="1412134430212" TEXT="fmap :: ( a -&gt; b ) -&gt; f a -&gt; f b"/>
+<node CREATED="1412134684445" ID="ID_291639011" MODIFIED="1412134728405" TEXT="Functor typeclasses are things that can be mapped over, like lists"/>
+<node CREATED="1412134731108" ID="ID_901100707" MODIFIED="1412134779738" TEXT="list type ([]) is part of the Functor typeclass">
+<node CREATED="1412134780682" ID="ID_1456801412" MODIFIED="1412134801061" TEXT="instance Functor [] where; fmap = map"/>
+</node>
+<node CREATED="1412135117317" ID="ID_1085617836" MODIFIED="1412135141374" TEXT="Functor types must have kind * -&gt; *"/>
+</node>
+</node>
+</node>
+<node CREATED="1412133835352" ID="ID_1171287918" MODIFIED="1412133859853" TEXT="kinds">
+<node CREATED="1412133860422" ID="ID_1664401133" MODIFIED="1412133918816" TEXT="i.e. types of types"/>
+<node CREATED="1412133919740" ID="ID_1058270970" MODIFIED="1412133963000" TEXT=":k Maybe">
+<node CREATED="1412133964932" ID="ID_187625585" MODIFIED="1412133971628" TEXT="Maybe :: * -&gt; *">
+<node CREATED="1412133973166" ID="ID_883582142" MODIFIED="1412134149345" TEXT="Maybe is a type costructor of &quot;* -&gt; *&quot; kind, i.e. it takes one concrete type and returns a concrete type"/>
+</node>
+</node>
+<node CREATED="1412134028286" ID="ID_236545402" MODIFIED="1412134032817" TEXT=":k Maybe Int">
+<node CREATED="1412134033620" ID="ID_374354708" MODIFIED="1412134039087" TEXT="Maybe Int :: *">
+<node CREATED="1412134040326" ID="ID_1678317383" MODIFIED="1412134128198" TEXT="Maybe Int has kind &quot;*&quot;, i.e. returns a concrete type"/>
+</node>
+</node>
+<node CREATED="1412134164996" ID="ID_82881280" MODIFIED="1412134169912" TEXT=":k Either">
+<node CREATED="1412134170670" ID="ID_763019278" MODIFIED="1412134181636" TEXT="Either :: * -&gt; * -&gt; *">
+<node CREATED="1412134182353" ID="ID_302145566" MODIFIED="1412134214802" TEXT="Either takes two concrete types as type parameters to produce a concrete type"/>
+<node CREATED="1412134215552" ID="ID_1735177061" MODIFIED="1412134259350" TEXT="See how it&apos;s like a function that takes two values and returns one (a-&gt;b-&gt;c)"/>
+<node CREATED="1412134265198" ID="ID_1038809878" MODIFIED="1412134291352" TEXT="Type constructors are curried so we can partially apply them">
+<node CREATED="1412134296202" ID="ID_1020587510" MODIFIED="1412134304318" TEXT=":k Either Int">
+<node CREATED="1412134304854" ID="ID_887660572" MODIFIED="1412134316288" TEXT="Either Int :: * -&gt; *"/>
+</node>
+<node CREATED="1412134318100" ID="ID_675323545" MODIFIED="1412134324498" TEXT=":k Either Int, Int">
+<node CREATED="1412134325188" ID="ID_1754759381" MODIFIED="1412134331193" TEXT="Either Int Int :: *"/>
+</node>
+</node>
 </node>
 </node>
 </node>
