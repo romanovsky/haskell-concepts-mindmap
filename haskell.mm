@@ -13,6 +13,45 @@
 <node CREATED="1400818929923" ID="ID_1018446601" MODIFIED="1401241383827" TEXT="&gt;&gt; (&quot;then&quot;. bind ignoring the return value)">
 <font NAME="SansSerif" SIZE="14"/>
 </node>
+<node CREATED="1412394356454" ID="ID_441003639" MODIFIED="1412394359241" TEXT="functions">
+<node CREATED="1412394264098" ID="ID_718897117" MODIFIED="1412394353384" TEXT="putStr, putStrLn, putChar"/>
+<node CREATED="1412394363724" ID="ID_359754198" MODIFIED="1412394386352" TEXT="print the same as &quot;putStrLn . show&quot;"/>
+<node CREATED="1412394443821" ID="ID_1801398437" MODIFIED="1412394491375" TEXT="getChar">
+<node CREATED="1412394491794" ID="ID_1079508649" MODIFIED="1412394507656" TEXT="mind the buffering!"/>
+</node>
+<node CREATED="1412394565583" ID="ID_912206660" MODIFIED="1412394568192" TEXT="when">
+<node CREATED="1412394578442" ID="ID_1113265816" MODIFIED="1412394601464" TEXT="if something then do some I/O action else return ()"/>
+</node>
+<node CREATED="1412394616217" ID="ID_1383861245" MODIFIED="1412394851804" TEXT="sequence">
+<node CREATED="1412394643561" ID="ID_235513656" MODIFIED="1412394728996" TEXT="takes list of I/O actions and performs them one after the other. Returns list of results for every action"/>
+<node CREATED="1412394774070" ID="ID_814549329" MODIFIED="1412394795718" TEXT="use it for mapping functions like print over lists">
+<node CREATED="1412394796345" ID="ID_968925927" MODIFIED="1412394805800" TEXT="sequence ( map print [1,2,3] )"/>
+</node>
+</node>
+<node CREATED="1412394852574" ID="ID_253013447" MODIFIED="1412394938363" TEXT="mapM, mapM_">
+<node CREATED="1412394860963" ID="ID_61542293" MODIFIED="1412394904172" TEXT="takes a function and a list, maps the function over the lists and then sequences it"/>
+<node CREATED="1412394912311" ID="ID_718779721" MODIFIED="1412394932747" TEXT="mapM_ does the same as mapM but throus away the result"/>
+</node>
+<node CREATED="1412394954384" ID="ID_235565583" MODIFIED="1412394957374" TEXT="forever">
+<node CREATED="1412394958203" ID="ID_844929348" MODIFIED="1412395002033" TEXT="takes an I/O action and returns I/O action that just repeats the I/O action it got forever"/>
+</node>
+<node CREATED="1412395005123" ID="ID_13342859" MODIFIED="1412395012506" TEXT="forM">
+<node CREATED="1412395013333" ID="ID_1540718922" MODIFIED="1412395050971" TEXT="like mapM but parameters switched around, i.e. first is list, second is the function"/>
+<node CREATED="1412395084582" ID="ID_1227256927" MODIFIED="1412395143875" TEXT="make an I/O action for every element in this lists. Useful with lambdas and do notation">
+<node CREATED="1412395144639" ID="ID_1138275120" MODIFIED="1412395212884" TEXT="main = do; colors &lt;- forM [1,2,3] ( \a -&gt; do; ... )"/>
+</node>
+</node>
+<node CREATED="1412395351144" ID="ID_150839775" MODIFIED="1412395379273" TEXT="Don&apos;t think of a function like putStrLn as a function that takes a string and prints it to the screen. Think of it as a function that takes a string and returns an I/O action"/>
+</node>
+</node>
+<node CREATED="1400818362571" ID="ID_738875468" MODIFIED="1401241383816" TEXT="return">
+<font NAME="SansSerif" SIZE="14"/>
+<node CREATED="1412393655162" ID="ID_1041268338" MODIFIED="1412393734030" TEXT="opposite to &quot;&lt;-&quot;"/>
+<node CREATED="1412393734761" ID="ID_1212662390" MODIFIED="1412393744148" TEXT="inject a value into the monadic type"/>
+<node CREATED="1412393776231" ID="ID_334596058" MODIFIED="1412393787804" TEXT="used when">
+<node CREATED="1412393788408" ID="ID_1743831051" MODIFIED="1412393955457" TEXT="we want different result value than value of last action in monad"/>
+<node CREATED="1412393962724" ID="ID_1053245802" MODIFIED="1412394216934" TEXT="return () to make an action (like do a fake I/O) to match mondad&apos;s return type"/>
+</node>
 </node>
 </node>
 <node CREATED="1400817904839" ID="ID_1306838632" MODIFIED="1401241383827" POSITION="left" TEXT="block">
@@ -333,9 +372,6 @@
 </node>
 <node CREATED="1400818359749" ID="ID_1956809887" MODIFIED="1411183499325" POSITION="right" TEXT="function">
 <font NAME="SansSerif" SIZE="14"/>
-<node CREATED="1400818362571" ID="ID_738875468" MODIFIED="1401241383816" TEXT="return">
-<font NAME="SansSerif" SIZE="14"/>
-</node>
 <node CREATED="1402078592403" ID="ID_402875694" MODIFIED="1402078677897" TEXT="all operators are functions with some syntax sugar">
 <node CREATED="1402078678457" ID="ID_1358207767" MODIFIED="1402078707671" TEXT="name of an operator comprised only of special characters"/>
 <node CREATED="1402078708657" ID="ID_1954351972" MODIFIED="1402078715800" TEXT="it&apos;s an infix function by default"/>
