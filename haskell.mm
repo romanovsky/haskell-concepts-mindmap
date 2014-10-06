@@ -5,6 +5,7 @@
 <font NAME="SansSerif" SIZE="14"/>
 <node CREATED="1400817573641" ID="ID_1210242801" MODIFIED="1411183378635" POSITION="right" TEXT="monad">
 <font NAME="SansSerif" SIZE="14"/>
+<node CREATED="1412573545231" ID="ID_515786282" MODIFIED="1412573596256" TEXT="Functor">
 <node CREATED="1400817583841" ID="ID_446361165" MODIFIED="1401241383827" TEXT="IO">
 <font NAME="SansSerif" SIZE="14"/>
 <node CREATED="1400817784342" ID="ID_1341267640" MODIFIED="1401241383827" TEXT="lift">
@@ -22,6 +23,49 @@
 <node CREATED="1412394565583" ID="ID_912206660" MODIFIED="1412394568192" TEXT="when">
 <node CREATED="1412394578442" ID="ID_1113265816" MODIFIED="1412394601464" TEXT="if something then do some I/O action else return ()"/>
 </node>
+<node CREATED="1412394954384" ID="ID_235565583" MODIFIED="1412394957374" TEXT="forever">
+<node CREATED="1412394958203" ID="ID_844929348" MODIFIED="1412395002033" TEXT="takes an I/O action and returns I/O action that just repeats the I/O action it got forever"/>
+</node>
+<node CREATED="1412574154854" ID="ID_530164415" MODIFIED="1412574159157" TEXT="getContents">
+<node CREATED="1412574160020" ID="ID_425914342" MODIFIED="1412574421303" TEXT="reads from STDIO until EOF and returns it as a string">
+<node CREATED="1412574423346" ID="ID_86996452" MODIFIED="1412574443345" TEXT="string is being produced in lazy fashion"/>
+</node>
+</node>
+<node CREATED="1412575077977" ID="ID_540819033" MODIFIED="1412575091338" TEXT="intercat :: (String -&gt; String) -&gt; IO ()">
+<node CREATED="1412575205794" ID="ID_166609204" MODIFIED="1412575340930" TEXT="think of a command between bash pipes: transform input into the desired output"/>
+</node>
+<node CREATED="1412575680004" ID="ID_1113018030" MODIFIED="1412575686121" TEXT="System.IO">
+<node CREATED="1412575686789" ID="ID_1291071718" MODIFIED="1412575846332" TEXT="openFile, hGetContents, hClose"/>
+<node CREATED="1412576500203" ID="ID_1557272956" MODIFIED="1412576508757" TEXT="hSetBuffering">
+<node CREATED="1412576521188" ID="ID_1860291719" MODIFIED="1412576581898" TEXT="hSetBuffering handle &lt;NoBuffering | LineBuffreing | BlockBuffering (Maybe Int)&gt;"/>
+</node>
+<node CREATED="1412576195598" ID="ID_630766632" MODIFIED="1412576209398" TEXT="hGetLine, hPutStr, hPutStrLn, hGetChar"/>
+<node CREATED="1412575964840" ID="ID_18888644" MODIFIED="1412575968008" TEXT="withFile">
+<node CREATED="1412576008368" ID="ID_1830330961" MODIFIED="1412576065076" TEXT="withFile &quot;path&quot; ReadMode (\handle -&gt; do ; contents &lt;- hGetContents handle; doSomethingWith(contents))"/>
+</node>
+<node CREATED="1412576271494" ID="ID_831398332" MODIFIED="1412576284445" TEXT="readFile">
+<node CREATED="1412576285054" ID="ID_800655101" MODIFIED="1412576308492" TEXT="contents &lt;- readFile &quot;path/to/file&quot;; doSomethingWith(contents)"/>
+</node>
+<node CREATED="1412576328166" ID="ID_1752148476" MODIFIED="1412576333564" TEXT="writeFile">
+<node CREATED="1412576334249" ID="ID_105262345" MODIFIED="1412576352802" TEXT="writeFile &quot;path/to/file&quot; contentsString"/>
+</node>
+<node CREATED="1412576390270" ID="ID_1338550492" MODIFIED="1412576394005" TEXT="appendFile">
+<node CREATED="1412576394790" ID="ID_1412223859" MODIFIED="1412576416510" TEXT="appendFile &quot;path/to/file&quot; additionalContnetString"/>
+</node>
+<node CREATED="1412576617975" ID="ID_883878051" MODIFIED="1412576624196" TEXT="hFlush">
+<node CREATED="1412576625023" ID="ID_1466807594" MODIFIED="1412576641083" TEXT="flushes buffer to the device"/>
+</node>
+<node CREATED="1412576823127" ID="ID_1052698833" MODIFIED="1412576826360" TEXT="openTempFile"/>
+</node>
+<node CREATED="1412576759339" ID="ID_972582137" MODIFIED="1412576764322" TEXT="System.Directory">
+<node CREATED="1412576771472" ID="ID_155008157" MODIFIED="1412576799082" TEXT="removeFile"/>
+<node CREATED="1412576799775" ID="ID_1469135053" MODIFIED="1412576801881" TEXT="renameFile"/>
+</node>
+<node CREATED="1412395351144" ID="ID_150839775" MODIFIED="1412395379273" TEXT="Don&apos;t think of a function like putStrLn as a function that takes a string and prints it to the screen. Think of it as a function that takes a string and returns an I/O action"/>
+</node>
+</node>
+</node>
+<node CREATED="1412573597400" ID="ID_1096489129" MODIFIED="1412573600365" TEXT="functions">
 <node CREATED="1412394616217" ID="ID_1383861245" MODIFIED="1412394851804" TEXT="sequence">
 <node CREATED="1412394643561" ID="ID_235513656" MODIFIED="1412394728996" TEXT="takes list of I/O actions and performs them one after the other. Returns list of results for every action"/>
 <node CREATED="1412394774070" ID="ID_814549329" MODIFIED="1412394795718" TEXT="use it for mapping functions like print over lists">
@@ -32,16 +76,11 @@
 <node CREATED="1412394860963" ID="ID_61542293" MODIFIED="1412394904172" TEXT="takes a function and a list, maps the function over the lists and then sequences it"/>
 <node CREATED="1412394912311" ID="ID_718779721" MODIFIED="1412394932747" TEXT="mapM_ does the same as mapM but throus away the result"/>
 </node>
-<node CREATED="1412394954384" ID="ID_235565583" MODIFIED="1412394957374" TEXT="forever">
-<node CREATED="1412394958203" ID="ID_844929348" MODIFIED="1412395002033" TEXT="takes an I/O action and returns I/O action that just repeats the I/O action it got forever"/>
-</node>
 <node CREATED="1412395005123" ID="ID_13342859" MODIFIED="1412395012506" TEXT="forM">
 <node CREATED="1412395013333" ID="ID_1540718922" MODIFIED="1412395050971" TEXT="like mapM but parameters switched around, i.e. first is list, second is the function"/>
 <node CREATED="1412395084582" ID="ID_1227256927" MODIFIED="1412395143875" TEXT="make an I/O action for every element in this lists. Useful with lambdas and do notation">
 <node CREATED="1412395144639" ID="ID_1138275120" MODIFIED="1412395212884" TEXT="main = do; colors &lt;- forM [1,2,3] ( \a -&gt; do; ... )"/>
 </node>
-</node>
-<node CREATED="1412395351144" ID="ID_150839775" MODIFIED="1412395379273" TEXT="Don&apos;t think of a function like putStrLn as a function that takes a string and prints it to the screen. Think of it as a function that takes a string and returns an I/O action"/>
 </node>
 </node>
 <node CREATED="1400818362571" ID="ID_738875468" MODIFIED="1401241383816" TEXT="return">
@@ -459,6 +498,12 @@
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1402974434904" ID="ID_731572662" MODIFIED="1402974455496" TEXT="flip :: (a -&gt; b -&gt; c) -&gt; b -&gt; c -&gt; a"/>
 </node>
+</node>
+</node>
+<node CREATED="1412574900122" ID="ID_169657169" MODIFIED="1412574909081" POSITION="right" TEXT="useful functions">
+<node CREATED="1412574909536" ID="ID_1850944166" MODIFIED="1412574915225" TEXT="String">
+<node CREATED="1412574915998" ID="ID_437028714" MODIFIED="1412574927282" TEXT="lines, unlines"/>
+<node CREATED="1412574928054" ID="ID_1479082275" MODIFIED="1412574932901" TEXT="words, unwords"/>
 </node>
 </node>
 <node CREATED="1401165459971" ID="ID_1980026447" MODIFIED="1411183573580" POSITION="right" TEXT="data types">
@@ -887,6 +932,9 @@
 <node CREATED="1407285869597" ID="ID_612645428" MODIFIED="1407285886490" TEXT="same as above plus you can refer to Data.Map by M"/>
 </node>
 </node>
+</node>
+<node CREATED="1412577021844" ID="ID_1821546187" MODIFIED="1412577023271" POSITION="left" TEXT="tools">
+<node CREATED="1412577024007" ID="ID_307166204" MODIFIED="1412577035837" TEXT="runhaskell haskellsourcefile.hs"/>
 </node>
 </node>
 </map>
