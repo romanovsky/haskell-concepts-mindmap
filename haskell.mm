@@ -625,6 +625,55 @@
 <icon BUILTIN="help"/>
 <node CREATED="1411184842390" ID="ID_393460620" MODIFIED="1411184844080" TEXT="TODO"/>
 </node>
+<node CREATED="1431829587211" ID="ID_884948223" MODIFIED="1431829614012" TEXT="data vs newtype vs type">
+<node CREATED="1431829616851" ID="ID_1602696720" MODIFIED="1431829619440" TEXT="data">
+<node CREATED="1431829797220" ID="ID_1646321951" MODIFIED="1431829810177" TEXT="purpose">
+<node CREATED="1431829811470" ID="ID_328829088" MODIFIED="1431829814974" TEXT="creates new algebraic type with value constructors"/>
+<node CREATED="1431829759653" ID="ID_436662099" MODIFIED="1431829773303" TEXT="Used to create new data type">
+<font NAME="SansSerif" SIZE="12"/>
+</node>
+</node>
+<node CREATED="1431829823697" ID="ID_243772176" MODIFIED="1431829872556" TEXT="features">
+<node CREATED="1431829651933" ID="ID_129317368" MODIFIED="1431829656519" TEXT="Can have several value constructors"/>
+<node CREATED="1431829670578" ID="ID_414207222" MODIFIED="1431829672409" TEXT="Value constructors are lazy "/>
+<node CREATED="1431829682637" ID="ID_1884317855" MODIFIED="1431829684484" TEXT="Values can have several fields"/>
+<node CREATED="1431829698966" ID="ID_1989286285" MODIFIED="1431829700597" TEXT="Affects both compilation and runtime, have runtime overhead"/>
+<node CREATED="1431829709150" ID="ID_710702531" MODIFIED="1431829710297" TEXT="Created type is a distinct new type"/>
+<node CREATED="1431829718137" ID="ID_131141685" MODIFIED="1431829719713" TEXT="Can have its own type class instances"/>
+<node CREATED="1431829737707" ID="ID_907007236" MODIFIED="1431829739237" TEXT="When pattern matching against value constructors, WILL be evaluated at least to weak head normal form"/>
+</node>
+</node>
+<node CREATED="1431829620214" ID="ID_1653476546" MODIFIED="1431829623085" TEXT="newtype">
+<node CREATED="1431829877129" ID="ID_1490804879" MODIFIED="1431829880014" TEXT="purpose">
+<node CREATED="1431829892892" ID="ID_168682488" MODIFIED="1431829894417" TEXT="creates new &#x201c;decorating&#x201d; type with value constructor"/>
+<node CREATED="1431829905938" ID="ID_599566496" MODIFIED="1431829908643" TEXT="Used to create higher level concept based on existing type with distinct set of supported operations or that is not interchangeable with original type (example: Meter, Cm, Feet is Double)"/>
+</node>
+<node CREATED="1431829914266" ID="ID_620710696" MODIFIED="1431829916728" TEXT="features">
+<node CREATED="1431830178650" ID="ID_1759320327" MODIFIED="1431830180487" TEXT="Can have only one value constructor"/>
+<node CREATED="1431830187491" ID="ID_603894883" MODIFIED="1431830189873" TEXT="Value constructor is strict "/>
+<node CREATED="1431830196727" ID="ID_255874966" MODIFIED="1431830197929" TEXT="Value can have only one field"/>
+<node CREATED="1431830205998" ID="ID_217043185" MODIFIED="1431830207223" TEXT="Affects only compilation, no runtime overhead"/>
+<node CREATED="1431830213581" ID="ID_1375468215" MODIFIED="1431830214854" TEXT="Created type is a distinct new type"/>
+<node CREATED="1431830217182" ID="ID_643976302" MODIFIED="1431830226966" TEXT="Can have its own type class instances"/>
+<node CREATED="1431830243692" ID="ID_658466388" MODIFIED="1431830260195" TEXT="When pattern matching against value constructor, CAN be not evaluated at all"/>
+</node>
+</node>
+<node CREATED="1431829623957" ID="ID_1327727753" MODIFIED="1431829625775" TEXT="type">
+<node CREATED="1431829955447" ID="ID_1388211520" MODIFIED="1431829958007" TEXT="purpose">
+<node CREATED="1431829959063" ID="ID_1245774100" MODIFIED="1431829961307" TEXT="creates an alternative name (synonym) for a type (like typedef in C)"/>
+<node CREATED="1431829972846" ID="ID_1597909238" MODIFIED="1431829977377" TEXT="Used to create higher level concept based on existing type with the same set of supported operations (example: String is [Char])"/>
+</node>
+<node CREATED="1431830278008" ID="ID_509915000" MODIFIED="1431830279722" TEXT="features">
+<node CREATED="1431830281113" ID="ID_1331432337" MODIFIED="1431830295160" TEXT="No value constructors"/>
+<node CREATED="1431830296200" ID="ID_1058870599" MODIFIED="1431830309032" TEXT="No fields"/>
+<node CREATED="1431830310239" ID="ID_1391829207" MODIFIED="1431830316195" TEXT="Affects only compilation, no runtime overhead"/>
+<node CREATED="1431830324092" ID="ID_1057380580" MODIFIED="1431830328619" TEXT="No new type is created (only a new name for existing type)"/>
+<node CREATED="1431830334207" ID="ID_1505218064" MODIFIED="1431830336088" TEXT="Can NOT have its own type class instances"/>
+<node CREATED="1431830341771" ID="ID_1555176110" MODIFIED="1431830343939" TEXT="When pattern matching against data constructor, behaves the same as original type"/>
+<node CREATED="1431830352518" ID="ID_260182654" MODIFIED="1431830354581" TEXT="Used to create higher level concept based on existing type with the same set of supported operations (example: String is [Char])"/>
+</node>
+</node>
+</node>
 </node>
 <node CREATED="1411184930571" ID="ID_1272171161" MODIFIED="1411184945167" TEXT="abstract data types">
 <icon BUILTIN="help"/>
